@@ -1,0 +1,670 @@
+// This is your Prisma schema file for the HomeShopBD unified application
+// Database: PostgreSQL (Neon or other free PostgreSQL provider)
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ============================================
+// CORE E-COMMERCE MODELS
+// ============================================
+
+model User {
+  id                    String    @id @default(cuid())
+  email                 String    @unique
+  phone                 String?
+  password              String
+  fullName              String
+  address               String?
+  paymentId             String?
+  imageURL              String?
+  imageURL2             String?
+  gender                Gender?
+  status                UserStatus @default(ACTIVE)
+  role                  UserRole   @default(USER)
+  isWholesale           WholesaleStatus @default(INACTIVE)
+  forgetPasswordToken   String?
+  totalBaleens          Int?
+  activeBaleens         Int?
+  pendingBaleens        Int?
+  dueBaleens            Int?
+  account_Type          String?
+  bikash_Number         String?
+  account               Json?      // Array of {name, number}
+  coupon                String?
+  shop_name             String?
+  shop_logo             String?
+  shop_address          String?
+  wallet                Float?
+  joiningDate           DateTime?
+  lastCollected         DateTime   @default(now())
+  shop_phone            String?
+  with_dro              WholesaleStatus @default(INACTIVE)
+  passwordChangedAt     DateTime?
+  passwordResetToken    String?
+  passwordResetExpires  DateTime?
+  createdAt             DateTime   @default(now())
+  updatedAt             DateTime   @updatedAt
+
+  // Relations
+  orders                Order[]
+  blogs                 Blog[]
+  notifications         Notification[]
+  meetingsCreated       Meeting[]  @relation("MeetingCreator")
+  meetingAssignments    MeetingAssignment[]
+  paymentHistories      PaymentHistory[]
+
+  @@index([email])
+  @@index([role])
+  @@index([status])
+}
+
+model Product {
+  id                String    @id @default(cuid())
+  name              String
+  sku               String    @unique
+  path              String    @unique
+  description       String?   @db.Text
+  category          String
+  subCategory       String[]
+  productType       String?
+  productColor      String[]
+  saleCount         Int       @default(0)
+  quantity          Int
+  buyingPrice       Float
+  productPrice      Float
+  salePrice         Float
+  wholesalePrice    Float?
+  advance           Float?
+  discount          Float
+  brand             String?
+  tags              String[]
+  imageURLs         String[]
+  imageURLs2        String[]
+  youtube           String?
+  size              String[]
+  ratingValue       Float?
+  wholesaleStatus   WholesaleStatus @default(INACTIVE)
+  status            Boolean   @default(true)
+  free_delivery     Boolean   @default(false)
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+
+  // Relations
+  orderItems        OrderItem[]
+  banners           Banner[]
+  flashSales        Flash[]
+
+  @@index([category])
+  @@index([brand])
+  @@index([status])
+  @@index([sku])
+}
+
+model Order {
+  id                    String      @id @default(cuid())
+  invoiceNumber         String      @unique
+  userId                String?
+  shippingPrice         Float       @default(0)
+  totalAmount           Float       @default(0)
+  codAmount             Float?
+  paymentId             String?
+  afterDiscountPrice    Float       @default(0)
+  originalProductPrice  Float       @default(0)
+  couponDiscount        Float       @default(0)
+  discount              Float       @default(0)
+  date                  DateTime    @default(now())
+  status                OrderStatus @default(PENDING)
+  shippingAddress       Json
+  courierName           String?
+  courierId             String?
+  paymentDetails        Json
+  isWholesaleOrder      String      @default("no")
+  createdAt             DateTime    @default(now())
+  updatedAt             DateTime    @updatedAt
+
+  // Relations
+  user                  User?       @relation(fields: [userId], references: [id], onDelete: SetNull)
+  orderItems            OrderItem[]
+  notifications         Notification[]
+
+  @@index([userId])
+  @@index([status])
+  @@index([invoiceNumber])
+  @@index([date])
+}
+
+model OrderItem {
+  id                    String   @id @default(cuid())
+  orderId               String
+  productId             String
+  name                  String
+  price                 Float
+  quantity              Int
+  originalProductPrice  Float
+  imageURL              String
+  size                  String?
+  color                 String?
+  category              String?
+  createdAt             DateTime @default(now())
+
+  // Relations
+  order                 Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  product               Product  @relation(fields: [productId], references: [id], onDelete: Restrict)
+
+  @@index([orderId])
+  @@index([productId])
+}
+
+model Category {
+  id              String    @id @default(cuid())
+  parentCategory  String
+  childCategory   String[]
+  productType     String?
+  imageURLs       String[]
+  imageURLs2      String[]
+  status          Boolean
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  @@index([parentCategory])
+}
+
+model Brand {
+  id        String      @id @default(cuid())
+  name      String      @unique
+  image     String?
+  image2    String?
+  status    ActiveStatus @default(ACTIVE)
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+}
+
+model Brands {
+  id        String      @id @default(cuid())
+  name      String      @unique
+  image     String?
+  image2    String?
+  status    ActiveStatus @default(ACTIVE)
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+}
+
+// ============================================
+// MARKETING & PROMOTIONS
+// ============================================
+
+model Coupon {
+  id                  String      @id @default(cuid())
+  campName            String
+  couponCode          String
+  startDate           String
+  expireDate          String
+  discountPercentage  Float
+  minAmount           Float
+  underOfCategory     String
+  imageURL            String[]
+  imageURL2           String[]
+  show                ShowStatus  @default(ON)
+  status              ActiveStatus @default(ACTIVE)
+  createdAt           DateTime    @default(now())
+  updatedAt           DateTime    @updatedAt
+
+  @@index([couponCode])
+}
+
+model Banner {
+  id        String      @id @default(cuid())
+  title     String
+  image     String?
+  image2    String?
+  position  String      @default("0")
+  type      String      @default("main")
+  productIds String[]
+  status    ActiveStatus @default(ACTIVE)
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+
+  // Relations
+  products  Product[]
+}
+
+model Flash {
+  id        String      @id @default(cuid())
+  title     String
+  image     String?
+  image2    String?
+  end_time  DateTime?
+  productIds String[]
+  status    ActiveStatus @default(ACTIVE)
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+
+  // Relations
+  products  Product[]
+}
+
+model LandingPage {
+  id            String   @id @default(cuid())
+  title1        String
+  title2        String
+  YouTube       String
+  shortDes      String   @db.Text
+  products      Json     // Array of product data
+  galleryTitle  String
+  galleryImages String[]
+  featureTitle  String
+  features      String   @db.Text
+  packagePrice  Float
+  discount      Float?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model WholesaleLanding {
+  id          String   @id @default(cuid())
+  title       String
+  sub_title   String?
+  video       String?
+  for_whom    Json     // Array of {title}
+  why_for_you Json     // Array of {title}
+  benefits    Json     // Array of {icon, title, dec}
+  reviews     String[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+// ============================================
+// CONTENT MANAGEMENT
+// ============================================
+
+model Blog {
+  id               String     @id @default(cuid())
+  title            String
+  path             String
+  image            String?
+  image2           String?
+  description      String?    @db.Text
+  sort_description String?
+  userId           String?
+  view             Int        @default(0)
+  publishDate      DateTime   @default(now())
+  status           BlogStatus @default(SHOW)
+  createdAt        DateTime   @default(now())
+  updatedAt        DateTime   @updatedAt
+
+  // Relations
+  user             User?      @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  @@index([userId])
+  @@index([path])
+}
+
+// ============================================
+// OPERATIONS & LOGISTICS
+// ============================================
+
+model DeliveryCost {
+  id     String      @id @default(cuid())
+  city   String
+  cost   Float
+  status ActiveStatus @default(ACTIVE)
+}
+
+model OtherCityShippingCost {
+  id            String   @id @default(cuid())
+  otherCityCost Float
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+// ============================================
+// PAYMENT & TRANSACTIONS
+// ============================================
+
+model Payment {
+  id        String   @id @default(cuid())
+  userId    Int?
+  amount    Float?
+  trxID     String?
+  paymentID String?
+  date      String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model PaymentHistory {
+  id            String          @id @default(cuid())
+  historyTitle  String
+  requestAmount Float?
+  payAmount     Float?
+  note          String?
+  type          PaymentType
+  status        ActiveStatus    @default(ACTIVE)
+  userId        String?
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+
+  // Relations
+  user          User?           @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  @@index([userId])
+  @@index([type])
+}
+
+// ============================================
+// SYSTEM & CONFIGURATION
+// ============================================
+
+model InvoiceNumber {
+  id            String   @id @default(cuid())
+  invoiceNumber Int
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model Notification {
+  id        String           @id @default(cuid())
+  title     String
+  userId    String?
+  orderId   String?
+  type      NotificationType
+  status    ReadStatus       @default(UNREAD)
+  createdAt DateTime         @default(now())
+  updatedAt DateTime         @updatedAt
+
+  // Relations
+  user      User?            @relation(fields: [userId], references: [id], onDelete: SetNull)
+  order     Order?           @relation(fields: [orderId], references: [id], onDelete: SetNull)
+
+  @@index([userId])
+  @@index([status])
+}
+
+model Meeting {
+  id          String    @id @default(cuid())
+  userId      String?
+  title       String    @unique
+  description String?   @db.Text
+  date        DateTime?
+  link        String?
+  time        String?
+  status      ReadStatus @default(UNREAD)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  // Relations
+  creator          User?               @relation("MeetingCreator", fields: [userId], references: [id], onDelete: SetNull)
+  assignedUsers    MeetingAssignment[]
+
+  @@index([userId])
+}
+
+model MeetingAssignment {
+  id        String     @id @default(cuid())
+  meetingId String
+  userId    String
+  status    ReadStatus @default(UNREAD)
+
+  // Relations
+  meeting   Meeting    @relation(fields: [meetingId], references: [id], onDelete: Cascade)
+  user      User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([meetingId, userId])
+  @@index([meetingId])
+  @@index([userId])
+}
+
+model MyShop {
+  id            String   @id @default(cuid())
+  logo          String?
+  logo2         String?
+  email         String   @unique
+  shopName      String
+  address       String
+  phone         String
+  accountActive Int      @default(0)
+  renewActive   Int      @default(0)
+  pointBalance  Int      @default(0)
+  activeText    String?
+  renewText     String?
+  facebookPage  String?
+  facebookGroup String?
+  Youtube       String?
+  twitter       String?
+  linkedin      String?
+  aboutShop     String?  @db.Text
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model SiteApiSetting {
+  id                    String   @id @default(cuid())
+  fbPixelId             String?
+  redxApiBaseUrl        String?
+  redxApiAccessToken    String?
+  pathaoApiBaseUrl      String?
+  username              String?
+  client_id             String?
+  client_secret         String?
+  password              String?
+  pathaoApiStoreId      String?
+  steadFastApiBaseUrl   String?
+  steadFastApiKey       String?
+  steadFastSecretKey    String?
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+}
+
+// ============================================
+// ACCOUNTING MODULE
+// ============================================
+
+model Account {
+  id          String       @id @default(cuid())
+  accountName String       @unique
+  amount      Float
+  bgColor     String       @default("#808080")
+  status      ActiveStatus @default(ACTIVE)
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+
+  // Relations
+  histories          AccountingHistory[] @relation("ParentAccount")
+  expenses           Expense[]           @relation("ExpenseAccount")
+  expensesFromBalance Expense[]          @relation("FromBalance")
+  returnExpenses     ReturnExpense[]
+}
+
+model AccountingHistory {
+  id                     String           @id @default(cuid())
+  historyTitle           String
+  historyAmount          Float
+  currentAccountBalance  Float?
+  historyParentAccountId String
+  categoryId             String?
+  note                   String?
+  type                   HistoryType
+  status                 ActiveStatus     @default(ACTIVE)
+  createdAt              DateTime         @default(now())
+  updatedAt              DateTime         @updatedAt
+
+  // Relations
+  parentAccount          Account          @relation("ParentAccount", fields: [historyParentAccountId], references: [id], onDelete: Restrict)
+  category               ExpenseCategory? @relation(fields: [categoryId], references: [id], onDelete: SetNull)
+  returnExpenses         ReturnExpense[]
+
+  @@index([historyParentAccountId])
+  @@index([categoryId])
+  @@index([type])
+}
+
+// ============================================
+// EXPENSE MODULE
+// ============================================
+
+model Expense {
+  id             String          @id @default(cuid())
+  title          String
+  note           String?
+  categoryId     String
+  amount         Float
+  fromBalanceId  String
+  currentBalance Float?
+  type           ExpenseType
+  status         ActiveStatus    @default(ACTIVE)
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+
+  // Relations
+  category       Account         @relation("ExpenseAccount", fields: [categoryId], references: [id], onDelete: Restrict)
+  fromBalance    Account         @relation("FromBalance", fields: [fromBalanceId], references: [id], onDelete: Restrict)
+
+  @@index([categoryId])
+  @@index([fromBalanceId])
+  @@index([type])
+}
+
+model ExpenseCategory {
+  id        String       @id @default(cuid())
+  title     String       @unique
+  status    ActiveStatus @default(ACTIVE)
+  createdAt DateTime     @default(now())
+  updatedAt DateTime     @updatedAt
+
+  // Relations
+  histories AccountingHistory[]
+}
+
+model ExpenseCalculate {
+  id             String                     @id @default(cuid())
+  title          String                     @unique
+  columnPosition Int                        @default(0)
+  status         ActiveStatus               @default(ACTIVE)
+  createdAt      DateTime                   @default(now())
+  updatedAt      DateTime                   @updatedAt
+
+  // Relations
+  subItems       ExpenseCalculateSubItem[]
+}
+
+model ExpenseCalculateSubItem {
+  id          String       @id @default(cuid())
+  title       String       @unique
+  rowPosition Int
+  payableDate String
+  amount      Float        @default(0)
+  parentId    String
+  isPaid      PaidStatus   @default(UNPAID)
+  status      ActiveStatus @default(ACTIVE)
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+
+  // Relations
+  parent      ExpenseCalculate @relation(fields: [parentId], references: [id], onDelete: Cascade)
+
+  @@index([parentId])
+  @@index([isPaid])
+}
+
+model ReturnExpense {
+  id                 String            @id @default(cuid())
+  idOfHistoryId      String
+  returnAmount       Float
+  receivedAccountId  String
+  note               String?
+  status             ActiveStatus      @default(ACTIVE)
+  createdAt          DateTime          @default(now())
+  updatedAt          DateTime          @updatedAt
+
+  // Relations
+  history            AccountingHistory @relation(fields: [idOfHistoryId], references: [id], onDelete: Restrict)
+  receivedAccount    Account           @relation(fields: [receivedAccountId], references: [id], onDelete: Restrict)
+
+  @@index([idOfHistoryId])
+  @@index([receivedAccountId])
+}
+
+// ============================================
+// ENUMS
+// ============================================
+
+enum Gender {
+  male
+  female
+}
+
+enum UserStatus {
+  ACTIVE
+  BLOCKED
+}
+
+enum UserRole {
+  USER
+  ADMIN
+  RESALLER
+}
+
+enum WholesaleStatus {
+  ACTIVE
+  INACTIVE
+}
+
+enum ActiveStatus {
+  ACTIVE
+  INACTIVE
+}
+
+enum OrderStatus {
+  PENDING
+  PROCESSING
+  DELIVERED
+  CANCELLED
+}
+
+enum ShowStatus {
+  ON
+  OFF
+}
+
+enum BlogStatus {
+  SHOW
+  HIDDEN
+}
+
+enum ReadStatus {
+  READ
+  UNREAD
+}
+
+enum NotificationType {
+  ORDER
+  PAYMENT
+}
+
+enum PaymentType {
+  REQUEST
+  PAY
+}
+
+enum HistoryType {
+  EXPENSE
+  INCOME
+  RETURN
+}
+
+enum ExpenseType {
+  EXPENSE
+  INCOME
+  RETURN_MONEY
+}
+
+enum PaidStatus {
+  PAID
+  UNPAID
+}

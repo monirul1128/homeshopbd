@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.homeshopbd.com/sitemap-dynamic.xml
