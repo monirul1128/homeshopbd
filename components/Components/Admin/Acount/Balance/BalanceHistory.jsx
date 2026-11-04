@@ -3,7 +3,7 @@ import React, { useEffect } from 'react'
 import { useQuery } from 'react-query';
 import { geBalanceHistory } from '../../../../../lib/helper';
 import { useState } from 'react';
-import LoadingComponets from '../../../../Shared/LoadingComponets';
+import LoadingComponets from '../../../../shared/LoadingComponets';
 import HistoryCard from './HistoryCard';
 import { MdOutlineUnfoldMore } from "react-icons/md";
 import { server_url_v2 } from '../../../../../lib/config';

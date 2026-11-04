@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import ProductCard from "../../Shared/ProductCard";
+import ProductCard from '../../shared/ProductCard";
 import { AiFillEye } from "react-icons/ai";
 import CustomProductSectionSkeleton from "../CustomSkeleton/CustomProductSectionSkeleton";
 import CountdownTimer from "./CountdownTimer";

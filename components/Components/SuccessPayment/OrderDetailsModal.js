@@ -1,5 +1,5 @@
 import React from 'react';
-import CustomModal from '../../Shared/CustomModal';
+import CustomModal from '../../shared/CustomModal';
 import Image from 'next/image';
 
 const OrderDetailsModal = ({ product, openOrderDetailsModal, setOpenOrderDetailsModal }) => {

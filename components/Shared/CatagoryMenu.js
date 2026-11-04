@@ -3,7 +3,7 @@ import Image from "next/image";
 import { getCategories } from "../../lib/helper";
 import { useQuery } from "react-query";
 import LoadingComponets from "./LoadingComponets";
-import CreateContext from "../Components/CreateContex";
+import CreateContext from '../components/CreateContex";
 import Link from "next/link";
 import { useRouter } from "next/router";
 

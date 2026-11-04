@@ -4,7 +4,7 @@ import server_url from "../../../../lib/config";
 import FetchUpdateHook from "../../../../lib/FetchUpdateHook";
 import Link from "next/link";
 import { Tooltip } from "react-tooltip";
-import CustomModal from "../../../Shared/CustomModal";
+import CustomModal from '../../../shared/CustomModal";
 import ChangePassword from "./ChangePassword";
 import { RiLockPasswordFill } from "react-icons/ri";
 

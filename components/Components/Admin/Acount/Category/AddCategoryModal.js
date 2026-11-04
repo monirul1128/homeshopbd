@@ -1,11 +1,11 @@
 import React from 'react';
-import CustomModal from '../../../../Shared/CustomModal';
+import CustomModal from '../../../../shared/CustomModal';
 import { useForm } from 'react-hook-form';
 import { ModalPostMethodHook } from '../../../../../lib/usePostHooks';
 import { useState } from 'react';
 import { base_url_v2 } from '../../../../../lib/helper';
-import CustomeInput from '../../../../Shared/AddressInput/CustomeInput';
-import CustomButtonLoading from '../../../../Shared/CustomButtonLoading';
+import CustomeInput from '../../../../shared/AddressInput/CustomeInput';
+import CustomButtonLoading from '../../../../shared/CustomButtonLoading';
 
 const AddCategoryModal = ({ setAddCategoryModalOpen, refetch }) => {
     const [loading, setLoading] = useState(false)

@@ -5,7 +5,7 @@ import FetchUpdateHook from "../../../../lib/FetchUpdateHook";
 import Link from "next/link";
 import { Tooltip } from "react-tooltip";
 import swal from "sweetalert";
-import CustomModal from "../../../Shared/CustomModal";
+import CustomModal from '../../../shared/CustomModal";
 import PayModal from "./PayModal";
 
 const AllUserRow3 = ({

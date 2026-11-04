@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import CustomModal from '../../../../Shared/CustomModal';
+import CustomModal from '../../../../shared/CustomModal';
 import EditCategoryModal from './EditCategoryModal';
 import { HiDotsVertical } from 'react-icons/hi';
 import Link from 'next/link';

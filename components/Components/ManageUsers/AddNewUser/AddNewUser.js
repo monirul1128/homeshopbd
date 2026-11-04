@@ -8,9 +8,9 @@ import nidupload from "../../../../assets/img/myaccount/nidupload.png";
 
 import { useForm } from "react-hook-form";
 import server_url from "../../../../config";
-import AuthUser from "../../../../Hooks/AuthUser";
-import CreateUserHook from "../../../../Hooks/FetchFunction/CreateUserHook";
-import GetImageUploadUrl from "../../../../Hooks/FetchFunction/GetImageUploadUrl";
+import AuthUser from '../../../../hooks/AuthUser";
+import CreateUserHook from '../../../../hooks/FetchFunction/CreateUserHook";
+import GetImageUploadUrl from '../../../../hooks/FetchFunction/GetImageUploadUrl";
 
 const AddNewUser = () => {
   const [imageUrl, setMyImageUrl] = useState("");

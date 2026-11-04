@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import CreateContext from "../Components/CreateContex";
+import CreateContext from '../components/CreateContex";
 import { BiUser } from "react-icons/bi";
 import { AiOutlineHome } from "react-icons/ai";
 import { HiMenuAlt1 } from "react-icons/hi";

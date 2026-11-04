@@ -6,7 +6,7 @@ import { ModalUpdateMethodHook } from '../../../../../lib/usePostHooks';
 import { server_url_v2 } from '../../../../../lib/config';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import CustomButtonLoading from '../../../../Shared/CustomButtonLoading';
+import CustomButtonLoading from '../../../../shared/CustomButtonLoading';
 
 const ChangeExpenseDate = ({ setEditExpenseModalOpen, id, refetch }) => {
     const [loading, setLoading] = useState(false)

@@ -1,11 +1,11 @@
 import React from 'react'
 import { useForm } from 'react-hook-form';
-import CustomeInput from '../../../../Shared/AddressInput/CustomeInput';
+import CustomeInput from '../../../../shared/AddressInput/CustomeInput';
 import { useState } from 'react';
 import swal from 'sweetalert';
 import { base_url_v2 } from '../../../../../lib/helper';
 import { ModalPostMethodHook } from '../../../../../lib/usePostHooks';
-import CustomButtonLoading from '../../../../Shared/CustomButtonLoading';
+import CustomButtonLoading from '../../../../shared/CustomButtonLoading';
 
 
 

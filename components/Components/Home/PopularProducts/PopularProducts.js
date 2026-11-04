@@ -4,7 +4,7 @@ import { useQuery } from "react-query";
 import { products } from "../../../../lib/helper";
 import { getCookie, setCookie } from "../../../hooks/useCustomCookie";
 import { useCustomQuery } from "../../../hooks/useMyShopData";
-import ProductCard from "../../../Shared/ProductCard";
+import ProductCard from '../../../shared/ProductCard";
 import CreateContext from "../../CreateContex";
 import CustomProductSectionSkeleton from "../../CustomSkeleton/CustomProductSectionSkeleton";
 

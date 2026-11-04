@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { useContext } from 'react';
-import CreateContext from '../Components/CreateContex';
+import CreateContext from '../components/CreateContex';
 
 function useFacebookPixel() {
     const { siteApiSettingData, setSiteApiSettingData } = useContext(CreateContext)

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ProductCard from "../../Shared/ProductCard";
+import ProductCard from '../../shared/ProductCard";
 import CustomProductSectionSkeleton from "../CustomSkeleton/CustomProductSectionSkeleton";
 import AuthUser from "../../../lib/AuthUser";
 const ProductSection = ({ heading, subtitle = "", data, sliceItem = 10 }) => {

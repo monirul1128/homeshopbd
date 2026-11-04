@@ -1,6 +1,6 @@
 import { getCategories, products } from "../../../../lib/helper";
 import { useQuery } from "react-query";
-import LoadingComponets from "../../../Shared/LoadingComponets";
+import LoadingComponets from '../../../shared/LoadingComponets";
 import Link from "next/link";
 import Image from "next/image";
 import { useContext, useEffect, useState } from "react";

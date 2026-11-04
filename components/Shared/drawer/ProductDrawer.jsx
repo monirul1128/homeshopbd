@@ -7,7 +7,7 @@ import "react-modern-drawer/dist/index.css";
 import CartProductItems from "./CartProductItems";
 import LoadingComponets from "../LoadingComponets";
 import Link from "next/link";
-import CreateContext from "../../Components/CreateContex";
+import CreateContext from '../../components/CreateContex";
 import { useRouter } from "next/router";
 import { useQuery } from "react-query";
 import { products } from "../../../lib/helper";

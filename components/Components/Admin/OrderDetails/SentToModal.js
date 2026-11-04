@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Pathaw from './Pathaw';
 import SteadFast from './SteadFast';
-import CustomModal from '../../../Shared/CustomModal';
+import CustomModal from '../../../shared/CustomModal';
 import steadFastLogo1 from '../../../assets/courier/steadFastLogo1.jpg'
 import pathaoLogo from '../../../assets/courier/pathaoLogo.png'
 import redxLogo from '../../../assets/courier/redxlogo.png'

@@ -2,7 +2,7 @@ import Link from "next/link";
 import React, { useContext, useState } from "react";
 import { MdAddShoppingCart } from "react-icons/md";
 import Drawer from "react-modern-drawer";
-import CreateContext from "../../Components/CreateContex";
+import CreateContext from '../../components/CreateContex";
 import CatagoryMenu from "../CatagoryMenu";
 import AuthUser from "../../../lib/AuthUser";
 

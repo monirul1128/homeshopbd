@@ -3,7 +3,7 @@ import { convertTimestamp } from '../../../../../lib/convertTimestampDateAndTime
 import { Icon } from '@iconify/react';
 import { Tooltip } from 'react-tooltip';
 import ReturnBalanceModal from '../Category/ReturnBalanceModal';
-import CustomModal from '../../../../Shared/CustomModal';
+import CustomModal from '../../../../shared/CustomModal';
 import { server_url_v2 } from '../../../../../lib/config';
 import { totalReturnOfExpense } from '../../../../../lib/totalReturnOfExpense';
 

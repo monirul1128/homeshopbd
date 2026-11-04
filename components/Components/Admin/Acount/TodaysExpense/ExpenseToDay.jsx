@@ -8,7 +8,7 @@ import { convertTimestamp } from '../../../../../lib/convertTimestampDateAndTime
 import { Icon } from '@iconify/react';
 import { useQuery } from 'react-query';
 import { base_url_v2, getRowData } from '../../../../../lib/helper';
-import LoadingComponets from '../../../../Shared/LoadingComponets';
+import LoadingComponets from '../../../../shared/LoadingComponets';
 
 const ExpenseToDay = () => {
     // const [todaysExpense, setTodaysExpense] = useState([])

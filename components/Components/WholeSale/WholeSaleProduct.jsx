@@ -5,13 +5,13 @@ import { MdAddShoppingCart } from "react-icons/md";
 
 import "react-modern-drawer/dist/index.css";
 import Link from "next/link";
-import CreateContext from "../../Components/CreateContex";
+import CreateContext from '../../components/CreateContex";
 import { useRouter } from "next/router";
 import { useQuery } from "react-query";
 import { products } from "../../../lib/helper";
 import { useState } from "react";
 import { MdOutlineUnfoldMore } from "react-icons/md";
-import SelectProductItem2 from "../../Shared/drawer/SelectProductItem2";
+import SelectProductItem2 from '../../shared/drawer/SelectProductItem2";
 import { toast } from "react-toastify";
 import AuthUser from "../../../lib/AuthUser";
 

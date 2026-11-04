@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import SelectProductItemAll from "../../../../Shared/drawer/SelectProductItemAll";
+import SelectProductItemAll from '../../../../shared/drawer/SelectProductItemAll";
 import { postMethodHook, updateMethodHook } from "../../../../../lib/usePostHooks";
 import server_url from "../../../../../lib/config";
 

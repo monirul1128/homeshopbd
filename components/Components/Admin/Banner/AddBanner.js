@@ -5,7 +5,7 @@ import server_url from "../../../../lib/config";
 import swal from "sweetalert";
 import { postMethodHook } from "../../../../lib/usePostHooks";
 import Image from "next/image";
-import CustomButtonLoading from "../../../Shared/CustomButtonLoading";
+import CustomButtonLoading from '../../../shared/CustomButtonLoading";
 
 const AddBanner = ({ setAddBanner, refetch }) => {
   const [imageUrl, setImageUrl] = useState(null);

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import CustomeInput from "../../../Shared/AddressInput/CustomeInput";
+import CustomeInput from '../../../shared/AddressInput/CustomeInput";
 import swal from "sweetalert";
 import server_url from "../../../../lib/config";
 import { updateMethodHook } from "../../../../lib/usePostHooks";

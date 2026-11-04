@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { HiDotsVertical } from "react-icons/hi"
-import CustomModal from "../../../../Shared/CustomModal";
+import CustomModal from '../../../../shared/CustomModal";
 // import BalanceUpdate from "./BalanceUpdate";
 // import TransferBalance from "./TransferBalance";
 import BalanceHistory from "./BalanceHistory";

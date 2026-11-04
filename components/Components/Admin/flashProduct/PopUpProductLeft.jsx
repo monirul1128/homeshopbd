@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { updateMethodHook } from "../../../../lib/usePostHooks";
 import server_url from "../../../../lib/config";
-import SelectProductItemAll from "../../../Shared/drawer/SelectProductItemAll";
+import SelectProductItemAll from '../../../shared/drawer/SelectProductItemAll";
 import { uploadImage } from "../../../../lib/imageUploader";
 import Image from "next/image";
 import { BsCloudUploadFill } from "react-icons/bs";

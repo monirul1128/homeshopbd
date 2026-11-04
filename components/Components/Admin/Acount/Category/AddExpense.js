@@ -1,17 +1,17 @@
 import React from 'react';
-import CustomModal from '../../../../Shared/CustomModal';
+import CustomModal from '../../../../shared/CustomModal';
 import AddCategoryModal from './AddCategoryModal';
 import { useFetchVersionTwo } from '../../../../hooks/usePublicFetchVersionTwo';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
-import CustomeInput from '../../../../Shared/AddressInput/CustomeInput';
+import CustomeInput from '../../../../shared/AddressInput/CustomeInput';
 import { Icon } from '@iconify/react';
 import { server_url_v2 } from '../../../../../lib/config';
 import Select from "react-select";
 import { ModalPostMethodHook, deleteMethod, updateMethodHook } from '../../../../../lib/usePostHooks';
 import { base_url_v2 } from '../../../../../lib/helper';
-import CustomButtonLoading from '../../../../Shared/CustomButtonLoading';
+import CustomButtonLoading from '../../../../shared/CustomButtonLoading';
 import swal from 'sweetalert';
 
 const AddExpense = ({ setAddExpenseModalOpen, amount, title, id,refetchToDayDue }) => {
