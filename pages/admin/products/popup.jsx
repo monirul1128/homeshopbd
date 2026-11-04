@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import DashboardLayout from '../../../components/Components/Components/DashboardLayout';
-import FlashProductRight from '../../../components/Components/Components/Admin/flashProduct/FlashProductRight';
-import AdminDashboardBreadcrumb from '../../../components/Components/Shared/AdminDashboardBreadcrumb';
-import PopUpProductLeft from '../../../components/Components/Components/Admin/flashProduct/PopUpProductLeft';
+import DashboardLayout from '../../../components/Components/DashboardLayout';
+import FlashProductRight from '../../../components/Components/Admin/flashProduct/FlashProductRight';
+import AdminDashboardBreadcrumb from '../../../components/Shared/AdminDashboardBreadcrumb';
+import PopUpProductLeft from '../../../components/Components/Admin/flashProduct/PopUpProductLeft';
 
 const flashProduct = () => {
   const id = "693e47c05f133d7f48c32bd3";

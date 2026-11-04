@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 
 import { useQuery } from "react-query";
 import { getCategories, productsDashboard } from "../../../lib/helper";
-// import CustomPagination2 from '../../../components/Components/Shared/CustomPagination2';
+// import CustomPagination2 from '../../../components/Shared/CustomPagination2';
 
 const DashboardLayout = dynamic(
   () => import("../../../components/Components/DashboardLayout"),
@@ -19,10 +19,10 @@ const DashboardLayout = dynamic(
 //   }
 // );
 
-import ProductsTableItemsRow from '../../../components/Components/Shared/TableItem/ProductsTableItemsRow';
-import CustomPagination3 from '../../../components/Components/Shared/CustomPagination3';
+import ProductsTableItemsRow from '../../../components/Shared/TableItem/ProductsTableItemsRow';
+import CustomPagination3 from '../../../components/Shared/CustomPagination3';
 import { useRouter } from "next/router";
-// import ProductShowLimit from '../../../components/Components/Shared/ProductShowLimit';
+// import ProductShowLimit from '../../../components/Shared/ProductShowLimit';
 
 const ExportExcel = dynamic(
   () => import("../../../components/Components/Admin/ExportImport/ExportProducts"),

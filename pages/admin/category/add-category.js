@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import DashboardLayout from '../../../components/Components/Components/DashboardLayout';
-import AdminDashboardBreadcrumb from '../../../components/Components/Shared/AdminDashboardBreadcrumb';
+import DashboardLayout from '../../../components/Components/DashboardLayout';
+import AdminDashboardBreadcrumb from '../../../components/Shared/AdminDashboardBreadcrumb';
 import Image from "next/image";
 import { BsCloudUploadFill } from "react-icons/bs";
 import { TagsInput } from "react-tag-input-component";
@@ -8,7 +8,7 @@ import { useForm } from "react-hook-form";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import swal from "sweetalert";
-import CustomButtonLoading from '../../../components/Components/Shared/CustomButtonLoading';
+import CustomButtonLoading from '../../../components/Shared/CustomButtonLoading';
 import {
   uploadImage,
   uploadImage2,

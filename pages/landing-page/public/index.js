@@ -1,6 +1,6 @@
 import React from 'react';
-import { useFetchVersionTwo } from '../../../components/Components/hooks/usePublicFetchVersionTwo';
-import PublicAllPage from '../../../components/Components/Components/Admin/LandingPage/PublicAllPage';
+import { useFetchVersionTwo } from '../../../components/hooks/usePublicFetchVersionTwo';
+import PublicAllPage from '../../../components/Components/Admin/LandingPage/PublicAllPage';
 
 const landingPage = () => {
     const { data: pages, isLoading, refetch } = useFetchVersionTwo(['landing-page'], 'landing-page')

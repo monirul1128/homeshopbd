@@ -1,5 +1,5 @@
 import React from 'react';
-import DashboardLayout from '../../../components/Components/Components/DashboardLayout';
+import DashboardLayout from '../../../components/Components/DashboardLayout';
 import dynamic from "next/dynamic";
 import { useForm } from 'react-hook-form';
 import { BsCloudUploadFill } from 'react-icons/bs';
@@ -10,10 +10,10 @@ import swal from 'sweetalert';
 import { useState } from 'react';
 import Image from 'next/image';
 import { postMethodHook } from '../../../lib/usePostHooks';
-import SelectProduct from '../../../components/Components/Components/Admin/CustomOrder/SelectProduct';
-import ProductDrawer from '../../../components/Components/Shared/drawer/ProductDrawer';
-import AddedProduct from '../../../components/Components/Components/Admin/LandingPage/AddedProduct';
-import CustomButtonLoading from '../../../components/Components/Shared/CustomButtonLoading';
+import SelectProduct from '../../../components/Components/Admin/CustomOrder/SelectProduct';
+import ProductDrawer from '../../../components/Shared/drawer/ProductDrawer';
+import AddedProduct from '../../../components/Components/Admin/LandingPage/AddedProduct';
+import CustomButtonLoading from '../../../components/Shared/CustomButtonLoading';
 
 const ReactQuill = dynamic(import("react-quill"), { ssr: false });
 

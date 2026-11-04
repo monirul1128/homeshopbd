@@ -1,8 +1,8 @@
 import Image from "next/image";
-import AppAds from '../../components/Components/Components/Home/AppAds/AppAds';
+import AppAds from '../../components/Components/Home/AppAds/AppAds';
 import faq from "../../public/assets/faq.svg";
-import Contact from '../../components/Components/Components/Contact/Contact';
-import SecondaryImageCover from '../../components/Components/Shared/SecondaryImageCover';
+import Contact from '../../components/Components/Contact/Contact';
+import SecondaryImageCover from '../../components/Shared/SecondaryImageCover';
 
 const FAQ = () => {
   return (

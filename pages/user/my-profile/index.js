@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import UserDashLayout from '../../../components/Components/Components/userDashLayout';
+import UserDashLayout from '../../../components/Components/userDashLayout';
 import { useQuery } from "react-query";
 import { useForm } from "react-hook-form";
 import { singleImageUploader, uploadImage } from "../../../lib/imageUploader";

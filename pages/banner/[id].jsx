@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
-import ProductCard from '../../components/Components/Shared/ProductCard';
-import CustomProductSectionSkeleton from '../../components/Components/Components/CustomSkeleton/CustomProductSectionSkeleton';
+import ProductCard from '../../components/Shared/ProductCard';
+import CustomProductSectionSkeleton from '../../components/Components/CustomSkeleton/CustomProductSectionSkeleton';
 
 const BannerProduct = () => {
   const router = useRouter();

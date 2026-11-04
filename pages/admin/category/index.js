@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { useContext, useEffect, useState } from "react";
 import getFetchFunction from "../../../lib/getFetchFunction";
-import CreateContext from '../../../components/Components/Components/CreateContex';
-import DashboardLayout from '../../../components/Components/Components/DashboardLayout';
-import CategoryTableItem from '../../../components/Components/Shared/TableItem/TableItemCategory';
+import CreateContext from '../../../components/Components/CreateContex';
+import DashboardLayout from '../../../components/Components/DashboardLayout';
+import CategoryTableItem from '../../../components/Shared/TableItem/TableItemCategory';
 
 const Category = () => {
   const [categories, setCategories] = useState([]);

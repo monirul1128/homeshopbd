@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import DashboardLayout from '../../../components/Components/Components/DashboardLayout';
-import MeetingTable from '../../../components/Components/Components/meeting/MeetingTable';
+import DashboardLayout from '../../../components/Components/DashboardLayout';
+import MeetingTable from '../../../components/Components/meeting/MeetingTable';
 import Link from "next/link";
-import { useCustomQuery } from '../../../components/Components/hooks/useMyShopData';
-import CustomPagination from '../../../components/Components/Shared/CustomPagination';
+import { useCustomQuery } from '../../../components/hooks/useMyShopData';
+import CustomPagination from '../../../components/Shared/CustomPagination';
 
 const Meeting = () => {
   const [searchQuery, setSearchQuery] = useState("");

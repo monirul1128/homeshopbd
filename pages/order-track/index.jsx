@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import server_url from "../../lib/config";
-import CreateContext from '../../components/Components/Components/CreateContex';
+import CreateContext from '../../components/Components/CreateContex';
 
 const TrackOrder = () => {
   const { siteApiSettingData, setSiteApiSettingData } =

@@ -1,21 +1,21 @@
 import React, { useContext, useState } from "react";
-import UserDashLayout from '../../../components/Components/Components/userDashLayout';
+import UserDashLayout from '../../../components/Components/userDashLayout';
 import { MdLocalShipping, MdOutlineDone, MdPending } from "react-icons/md";
 import { useQuery } from "react-query";
 import { getUserDashboardInfo, getUsersById } from "../../../lib/helper";
 import AuthUser from "../../../lib/AuthUser";
-import DasboardOrderTable from '../../../components/Components/Components/User/DasboardOrderTable';
+import DasboardOrderTable from '../../../components/Components/User/DasboardOrderTable';
 import { FcPaid } from "react-icons/fc";
-import CreateContext from '../../../components/Components/Components/CreateContex';
+import CreateContext from '../../../components/Components/CreateContex';
 import { TbCalendarDue } from "react-icons/tb";
 import { updateMethodHook } from "../../../lib/usePostHooks";
 import server_url from "../../../lib/config";
 import swal from "sweetalert";
 import { SiVirustotal } from "react-icons/si";
 import { MdOutlinePending } from "react-icons/md";
-import CustomModal from '../../../components/Components/Shared/CustomModal';
-import PaymentHistory from '../../../components/Components/Components/User/paymentHistory/PaymentHistory';
-import SubmitModal from '../../../components/Components/Components/User/SubmitModal';
+import CustomModal from '../../../components/Shared/CustomModal';
+import PaymentHistory from '../../../components/Components/User/paymentHistory/PaymentHistory';
+import SubmitModal from '../../../components/Components/User/SubmitModal';
 
 const UserDashboard = () => {
   const { userInfo } = AuthUser();

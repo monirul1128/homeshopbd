@@ -1,7 +1,7 @@
 import Head from "next/head";
-import AppAds from '../../components/Components/Components/Home/AppAds/AppAds';
-import OfferCard from '../../components/Components/Components/Offer/OfferCards';
-import SecondaryImageCover from '../../components/Components/Shared/SecondaryImageCover';
+import AppAds from '../../components/Components/Home/AppAds/AppAds';
+import OfferCard from '../../components/Components/Offer/OfferCards';
+import SecondaryImageCover from '../../components/Shared/SecondaryImageCover';
 
 const Offer = () => {
   return (

@@ -1,13 +1,13 @@
 import Image from "next/image";
 import React, { useContext, useEffect, useRef, useState } from "react";
 import logo from "../../../public/assets/logo.png";
-import InvoiceTableItemRow from '../../../components/Components/Components/SuccessPayment/InvoiceTableItemRow';
+import InvoiceTableItemRow from '../../../components/Components/SuccessPayment/InvoiceTableItemRow';
 import ReactToPrint from "react-to-print";
 import { getNowDateInFormate } from "../../../lib/externalFunction";
 import { MdDoneOutline } from "react-icons/md";
-import CreateContext from '../../../components/Components/Components/CreateContex';
+import CreateContext from '../../../components/Components/CreateContex';
 import QRCode from "qrcode.react";
-import { useMyShopData } from '../../../components/Components/hooks/useMyShopData';
+import { useMyShopData } from '../../../components/hooks/useMyShopData';
 import RequireAuth from '../../../components/Components/RequireAuth/RequireAuth';
 import { AiFillPrinter } from "react-icons/ai";
 import { useRouter } from "next/router";

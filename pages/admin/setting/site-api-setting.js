@@ -3,13 +3,13 @@ import { useEffect } from 'react';
 import swal from 'sweetalert';
 import useSiteApiSettingUpdateWithFetch from '../../../lib/useSiteApiSettingUpdateWithFetch';
 import { useState } from 'react';
-import DashboardLayout from '../../../components/Components/Components/DashboardLayout';
-import AdminDashboardBreadcrumb from '../../../components/Components/Shared/AdminDashboardBreadcrumb';
+import DashboardLayout from '../../../components/Components/DashboardLayout';
+import AdminDashboardBreadcrumb from '../../../components/Shared/AdminDashboardBreadcrumb';
 import { useForm } from 'react-hook-form';
 import { useMemo } from 'react';
 import { useContext } from 'react';
-import CreateContext from '../../../components/Components/Components/CreateContex';
-import CustomButtonLoading from '../../../components/Components/Shared/CustomButtonLoading'
+import CreateContext from '../../../components/Components/CreateContex';
+import CustomButtonLoading from '../../../components/Shared/CustomButtonLoading'
 const SiteApiSetting = () => {
 
     const [loading, setLoading] = useState(false)

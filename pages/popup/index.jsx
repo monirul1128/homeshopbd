@@ -1,8 +1,8 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import ProductCard from '../../components/Components/Shared/ProductCard';
-import CustomProductSectionSkeleton from '../../components/Components/Components/CustomSkeleton/CustomProductSectionSkeleton';
-import CountdownTimer from '../../components/Components/Components/ProductSection/CountdownTimer';
+import ProductCard from '../../components/Shared/ProductCard';
+import CustomProductSectionSkeleton from '../../components/Components/CustomSkeleton/CustomProductSectionSkeleton';
+import CountdownTimer from '../../components/Components/ProductSection/CountdownTimer';
 
 const PopupProduct = () => {
   const [banner, setBanner] = useState(null);

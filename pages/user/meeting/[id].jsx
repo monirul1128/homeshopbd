@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import UserDashLayout from '../../../components/Components/Components/userDashLayout';
+import UserDashLayout from '../../../components/Components/userDashLayout';
 import Link from "next/link";
 import { BsArrowLeft } from "react-icons/bs";
 import { useRouter } from "next/router";

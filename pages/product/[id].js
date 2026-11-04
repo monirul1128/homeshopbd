@@ -2,30 +2,30 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import React, { useContext, useEffect, useState } from "react";
 
-import Descriptions from '../../components/Components/Components/ProductsDetails/Descriptions/Descriptions';
-import AppAds from '../../components/Components/Components/Home/AppAds/AppAds';
-import AlreadyProductHave from '../../components/Components/Components/Home/PopularProducts/AlreadyProductHave';
-import CreateContext from '../../components/Components/Components/CreateContex';
-import StarRating from '../../components/Components/Shared/StarRating';
-import ProductSection from '../../components/Components/Components/ProductSection/ProductSection';
+import Descriptions from '../../components/Components/ProductsDetails/Descriptions/Descriptions';
+import AppAds from '../../components/Components/Home/AppAds/AppAds';
+import AlreadyProductHave from '../../components/Components/Home/PopularProducts/AlreadyProductHave';
+import CreateContext from '../../components/Components/CreateContex';
+import StarRating from '../../components/Shared/StarRating';
+import ProductSection from '../../components/Components/ProductSection/ProductSection';
 import setCartInLocalStorageFromPorductDetails from "../../lib/setCartInLocalStorageFromPorductDetails";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { TiInputChecked } from "react-icons/ti";
-import ProductColorPicker from '../../components/Components/Components/ProductSection/ProductColorPicker';
-import ProductSizePicker from '../../components/Components/Components/ProductSection/ProductSizePicker';
-import WhatsAppButton from '../../components/Components/Shared/WhatsAppButton';
-import CustomMetaSetting from '../../components/Components/Shared/CustomMetaSetting';
-import CustomProductDetailsSkeleton from '../../components/Components/Components/CustomSkeleton/CustomProductDetailsSkeleton';
+import ProductColorPicker from '../../components/Components/ProductSection/ProductColorPicker';
+import ProductSizePicker from '../../components/Components/ProductSection/ProductSizePicker';
+import WhatsAppButton from '../../components/Shared/WhatsAppButton';
+import CustomMetaSetting from '../../components/Shared/CustomMetaSetting';
+import CustomProductDetailsSkeleton from '../../components/Components/CustomSkeleton/CustomProductDetailsSkeleton';
 
 import { BsBagPlus, BsCart4, BsTelephoneFill } from "react-icons/bs";
 import Head from "next/head";
 import Image from "next/image";
 import { useQuery } from "react-query";
 import AuthUser from "../../lib/AuthUser";
-import ImageDownloader from '../../components/Components/Shared/ImageDownloader';
-import ProductSection2 from '../../components/Components/Components/ProductSection/ProductSection2';
-import CustomModal from '../../components/Components/Shared/CustomModal';
+import ImageDownloader from '../../components/Shared/ImageDownloader';
+import ProductSection2 from '../../components/Components/ProductSection/ProductSection2';
+import CustomModal from '../../components/Shared/CustomModal';
 import { MdSlowMotionVideo } from "react-icons/md";
 /**
  * TODO: have to upload two image

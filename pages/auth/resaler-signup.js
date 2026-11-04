@@ -4,9 +4,9 @@ import { useForm } from "react-hook-form";
 import AuthUser from "../../lib/AuthUser";
 import CreateUserHook from "../../lib/CreateUserHook";
 import { useContext, useEffect, useState } from "react";
-import CustomButtonLoading from '../../components/Components/Shared/CustomButtonLoading';
+import CustomButtonLoading from '../../components/Shared/CustomButtonLoading';
 import CreateUserHook2 from "../../lib/CreateUserHook2";
-import CreateContext from '../../components/Components/Components/CreateContex';
+import CreateContext from '../../components/Components/CreateContex';
 
 const ResalerRegister = () => {
     const { getToken,userInfo, setToken } = AuthUser();

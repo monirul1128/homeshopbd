@@ -1,12 +1,12 @@
 import Image from "next/image";
 import React from "react";
-import { useFetchVersionTwo } from '../../components/Components/hooks/usePublicFetchVersionTwo';
+import { useFetchVersionTwo } from '../../components/hooks/usePublicFetchVersionTwo';
 import { useRouter } from "next/router";
-import LoadingComponets from '../../components/Components/Shared/LoadingComponets';
+import LoadingComponets from '../../components/Shared/LoadingComponets';
 import { Icon } from "@iconify/react";
-import WholeSaleLandingCard from '../../components/Components/Components/Admin/WholeSaleLanding/WholeSaleLandingCard';
-import WholeSalerHistory from '../../components/Components/Components/Admin/WholeSaleLanding/WholeSalerHistory';
-import Give from '../../components/Components/Components/Admin/WholeSaleLanding/Give';
+import WholeSaleLandingCard from '../../components/Components/Admin/WholeSaleLanding/WholeSaleLandingCard';
+import WholeSalerHistory from '../../components/Components/Admin/WholeSaleLanding/WholeSalerHistory';
+import Give from '../../components/Components/Admin/WholeSaleLanding/Give';
 
 const Page = () => {
   const router = useRouter();

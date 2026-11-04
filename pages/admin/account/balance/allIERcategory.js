@@ -1,12 +1,12 @@
 import { Icon } from '@iconify/react';
 import Link from 'next/link';
 import React from 'react';
-import { useFetchVersionTwo } from '../../../../components/Components/hooks/usePublicFetchVersionTwo';
+import { useFetchVersionTwo } from '../../../../components/hooks/usePublicFetchVersionTwo';
 import { useState } from 'react';
-import CategoryCard from '../../../../components/Components/Components/Admin/Acount/Category/CategoryCard';
-import LoadingComponets from '../../../../components/Components/Shared/LoadingComponets';
-import DashboardLayout from '../../../../components/Components/Components/DashboardLayout';
-import AdminDashboardBreadcrumb from '../../../../components/Components/Shared/AdminDashboardBreadcrumb';
+import CategoryCard from '../../../../components/Components/Admin/Acount/Category/CategoryCard';
+import LoadingComponets from '../../../../components/Shared/LoadingComponets';
+import DashboardLayout from '../../../../components/Components/DashboardLayout';
+import AdminDashboardBreadcrumb from '../../../../components/Shared/AdminDashboardBreadcrumb';
 
 const allIERcategory = () => {
     const [fetchQuery, setFetchQuery] = useState('expense-category')

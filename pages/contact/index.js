@@ -1,10 +1,10 @@
 import Image from "next/image";
-import AppAds from '../../components/Components/Components/Home/AppAds/AppAds';
+import AppAds from '../../components/Components/Home/AppAds/AppAds';
 import { BsChatSquareText } from "react-icons/bs";
 import { FiPhoneCall } from "react-icons/fi";
 import { GoLocation } from "react-icons/go";
-import Contact from '../../components/Components/Components/Contact/Contact';
-import SecondaryImageCover from '../../components/Components/Shared/SecondaryImageCover';
+import Contact from '../../components/Components/Contact/Contact';
+import SecondaryImageCover from '../../components/Shared/SecondaryImageCover';
 
 const Contacts = () => {
   return (

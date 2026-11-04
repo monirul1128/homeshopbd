@@ -1,5 +1,5 @@
 import React from "react";
-import SecondaryImageCover from '../../components/Components/Shared/SecondaryImageCover';
+import SecondaryImageCover from '../../components/Shared/SecondaryImageCover';
 import Head from "next/head";
 
 const AboutUs = () => {
