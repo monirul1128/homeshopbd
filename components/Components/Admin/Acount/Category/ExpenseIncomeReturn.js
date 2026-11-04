@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import CustomeInput from '../../../../shared/AddressInput/CustomeInput';
+import CustomeInput from '../../../../Shared/AddressInput/CustomeInput';
 import { server_url_v2 } from '../../../../../lib/config';
 import { CustomPostMethodHook } from '../../../../../lib/usePostHooks';
 import { Icon } from '@iconify/react';
-import CustomModal from '../../../../shared/CustomModal';
+import CustomModal from '../../../../Shared/CustomModal';
 import AddCategoryModal from './AddCategoryModal';
 import Select from "react-select";
-import CustomButtonLoading from '../../../../shared/CustomButtonLoading';
+import CustomButtonLoading from '../../../../Shared/CustomButtonLoading';
 
 const ExpenseIncomeReturn = ({ allCategories, refetch }) => {
     const [addCategoryModalOpen, setAddCategoryModalOpen] = useState(false);

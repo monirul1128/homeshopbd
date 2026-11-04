@@ -6,8 +6,8 @@ import { FcGoogle } from "react-icons/fc";
 import { RiFacebookFill } from "react-icons/ri";
 import swal from "sweetalert";
 import AuthUser from "../../lib/AuthUser";
-import CustomButtonLoading from "../../components/Shared/CustomButtonLoading";
-import CreateContext from "../../components/Components/CreateContex";
+import CustomButtonLoading from '../../Components/Shared/CustomButtonLoading";
+import CreateContext from '../../Components/Components/CreateContex";
 const Login = () => {
   const router = useRouter();
   const { http, setToken, getToken, userInfo } = AuthUser();

@@ -5,7 +5,7 @@ import swal from "sweetalert";
 import server_url from "../../../../lib/config";
 import FetchGetHook, { FetchGetHook2 } from "../../../../lib/FetchGetHook";
 import AllUserRow from "./AllUserRow";
-import CustomPagination from '../../../shared/CustomPagination";
+import CustomPagination from '../../../Shared/CustomPagination";
 import DownloadButton from "./DownloadButton";
 import DownloadButton2 from "./DownloadButton2";
 

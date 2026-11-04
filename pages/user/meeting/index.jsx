@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { useCustomQuery } from "../../../components/hooks/useMyShopData";
+import { useCustomQuery } from '../../../Components/hooks/useMyShopData";
 import Link from "next/link";
-import MeetingTableUser from "../../../components/Components/meeting/MeetingTableUser";
-import CustomPagination from "../../../components/Shared/CustomPagination";
-import UserDashLayout from "../../../components/Components/userDashLayout";
+import MeetingTableUser from '../../../Components/Components/meeting/MeetingTableUser";
+import CustomPagination from '../../../Components/Shared/CustomPagination";
+import UserDashLayout from '../../../Components/Components/userDashLayout";
 import AuthUser from "../../../lib/AuthUser";
 
 const Meeting = () => {

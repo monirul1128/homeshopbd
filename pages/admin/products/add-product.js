@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { BsCloudUploadFill } from "react-icons/bs";
-import DashboardLayout from "../../../components/Components/DashboardLayout";
+import DashboardLayout from '../../../Components/Components/DashboardLayout";
 import Image from "next/image";
 import { TagsInput } from "react-tag-input-component";
 import { useForm } from "react-hook-form";
@@ -9,18 +9,18 @@ import dynamic from "next/dynamic";
 const ReactQuill = dynamic(import("react-quill"), { ssr: false });
 import Select from "react-select";
 import swal from "sweetalert";
-import StarRating from "../../../components/Shared/StarRating";
+import StarRating from '../../../Components/Shared/StarRating";
 import {
   handleMultiImageUpload,
   uploadImage2,
   uploadMultipleFiles,
   uploadMultipleFiles2,
 } from "../../../lib/imageUploader";
-import ColorPicker from "../../../components/Shared/ColorPicker";
-import { useCustomQuery } from "../../../components/hooks/useMyShopData";
+import ColorPicker from '../../../Components/Shared/ColorPicker";
+import { useCustomQuery } from '../../../Components/hooks/useMyShopData";
 import { RiAddBoxFill } from "react-icons/ri";
-import CustomButtonLoading from "../../../components/Shared/CustomButtonLoading";
-import DropImageCom from "../../../components/Components/DropImageCom";
+import CustomButtonLoading from '../../../Components/Shared/CustomButtonLoading";
+import DropImageCom from '../../../Components/Components/DropImageCom";
 
 const AddProduct = () => {
   const [loading, setLoading] = useState(false);

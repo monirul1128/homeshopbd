@@ -15,7 +15,7 @@ import {
   sumOfSalePrice2,
 } from "../../../../lib/commonFunction";
 import { usePostOrder } from "../../../../lib/usePostOrder";
-import CustomModal from '../../../shared/CustomModal";
+import CustomModal from '../../../Shared/CustomModal";
 import SizeAndColorInCheckout from "../../CheckoutProductItems/SizeAndColorInCheckout";
 import server_url from "../../../../lib/config";
 import useFacebookPixel from "../../../hooks/useFacebookPixel";

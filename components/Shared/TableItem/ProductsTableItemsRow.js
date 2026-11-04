@@ -4,7 +4,7 @@ import { FaEdit, FaTrashAlt } from "react-icons/fa";
 import swal from "sweetalert";
 import handleDelete from "../../../lib/handleDelete";
 import handleUpdate from "../../../lib/handleUpdate";
-import CreateContext from '../../components/CreateContex";
+import CreateContext from '../../Components/CreateContex";
 import { useRouter } from "next/router";
 import ProductShowModal from "../ProductShowModal";
 import AdminProductDetails from "../AdminProductDetails";

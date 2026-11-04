@@ -1,5 +1,5 @@
 import React from "react";
-import CustomModal from '../../../shared/CustomModal";
+import CustomModal from '../../../Shared/CustomModal";
 import CheckoutProductItems from "../../CheckoutProductItems/CheckoutProductItems";
 import BdCity from "../../BdCity";
 import swal from "sweetalert";

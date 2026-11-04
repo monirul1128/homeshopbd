@@ -1,10 +1,10 @@
 import { useRouter } from "next/router";
 import React, { useContext, useEffect, useState } from "react";
-import BottomNav from '../shared/BottomNav";
-import DashboardNavbar from '../shared/DashboardNavbar";
-import CartDrawer from '../shared/drawer/CartDrawer";
-import Footers from '../shared/Footers";
-import Navbar from '../shared/Navbar";
+import BottomNav from '../Shared/BottomNav";
+import DashboardNavbar from '../Shared/DashboardNavbar";
+import CartDrawer from '../Shared/drawer/CartDrawer";
+import Footers from '../Shared/Footers";
+import Navbar from '../Shared/Navbar";
 import { useUserData } from "../hooks/useMyShopData";
 import CreateContext from "./CreateContex";
 import HelpButton from "./HelpButton";

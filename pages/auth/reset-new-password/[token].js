@@ -5,7 +5,7 @@ import AuthUser from "../../../lib/AuthUser";
 import server_url from "../../../lib/config";
 import CreateUserHook from "../../../lib/CreateUserHook";
 import { postMethodHook } from "../../../lib/usePostHooks";
-import { useUserData } from "../../../components/hooks/useMyShopData";
+import { useUserData } from '../../../Components/hooks/useMyShopData";
 import { useState } from "react";
 
 const ResetNewPassword = () => {

@@ -7,7 +7,7 @@ import {
   ModalUpdateMethodHook,
   deleteMethod,
 } from "../../../../../lib/usePostHooks";
-import CustomModal from '../../../../shared/CustomModal";
+import CustomModal from '../../../../Shared/CustomModal";
 import { useState } from "react";
 import UpdateExpenseChild from "./UpdateExpenseChild";
 import AddExpense from "../Category/AddExpense";

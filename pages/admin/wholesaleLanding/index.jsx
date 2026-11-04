@@ -1,6 +1,6 @@
 import React from "react";
-import DashboardLayout from "../../../components/Components/DashboardLayout";
-import WholeSaleLanding from "../../../components/Components/Admin/WholeSaleLanding/WholeSaleLanding";
+import DashboardLayout from '../../../Components/Components/DashboardLayout";
+import WholeSaleLanding from '../../../Components/Components/Admin/WholeSaleLanding/WholeSaleLanding";
 
 const Page = () => {
   return (

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import LoadingComponets from '../../../../shared/LoadingComponets';
+import LoadingComponets from '../../../../Shared/LoadingComponets';
 import HistoryCard from './HistoryCard';
 
 const FileteredHistory = ({accounts,isLoading,refetch,categoryTitle,returnAllData,returnRefetch}) => {

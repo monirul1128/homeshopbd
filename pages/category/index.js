@@ -1,10 +1,10 @@
 import { useRouter } from "next/router";
 import React, { useContext, useState, useEffect } from "react";
 import { useQuery } from "react-query";
-import ProductCard from "../../components/Shared/ProductCard";
-import CreateContext from "../../components/Components/CreateContex";
+import ProductCard from '../../Components/Shared/ProductCard";
+import CreateContext from '../../Components/Components/CreateContex";
 import InfiniteScroll from "react-infinite-scroll-component";
-import CustomProductSectionSkeleton2 from "../../components/Components/CustomSkeleton/CustomProductSectionSkeleton2";
+import CustomProductSectionSkeleton2 from '../../Components/Components/CustomSkeleton/CustomProductSectionSkeleton2";
 import { products } from "../../lib/helper";
 
 const CategoryPage = ({ initialData }) => {

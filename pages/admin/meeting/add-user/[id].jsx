@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import DashboardLayout from '../../../../components/DashboardLayout";
-import AdminDashboardBreadcrumb from '../../../../shared/AdminDashboardBreadcrumb";
+import DashboardLayout from '../../../../Components/DashboardLayout";
+import AdminDashboardBreadcrumb from '../../../../Shared/AdminDashboardBreadcrumb";
 import { FetchGetHook3 } from "../../../../lib/FetchGetHook";
 import server_url from "../../../../lib/config";
 import { Icon } from "@iconify/react";
-import CustomPagination from '../../../../shared/CustomPagination";
-import LoadingComponets from '../../../../shared/LoadingComponets";
-import AllUserRow4 from '../../../../components/ManageUsers/AllUsers/AllUserRow4";
+import CustomPagination from '../../../../Shared/CustomPagination";
+import LoadingComponets from '../../../../Shared/LoadingComponets";
+import AllUserRow4 from '../../../../Components/ManageUsers/AllUsers/AllUserRow4";
 import { updateMethodHook } from "../../../../lib/usePostHooks";
 import { useRouter } from "next/router";
 

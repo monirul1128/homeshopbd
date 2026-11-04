@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
-import UserDashLayout from "../../../components/Components/userDashLayout";
+import UserDashLayout from '../../../Components/Components/userDashLayout";
 import { Icon } from "@iconify/react";
-import WholeSaleUserInformation from "../../../components/Components/WholeSale/WholeSaleUserInformation";
-import CustomModal from "../../../components/Shared/CustomModal";
-import WholeSaleProduct from "../../../components/Components/WholeSale/WholeSaleProduct";
+import WholeSaleUserInformation from '../../../Components/Components/WholeSale/WholeSaleUserInformation";
+import CustomModal from '../../../Components/Shared/CustomModal";
+import WholeSaleProduct from '../../../Components/Components/WholeSale/WholeSaleProduct";
 import AuthUser from "../../../lib/AuthUser";
-import CreateContext from "../../../components/Components/CreateContex";
+import CreateContext from '../../../Components/Components/CreateContex";
 
 const WholeSale = () => {
   const { userInfo } = AuthUser();

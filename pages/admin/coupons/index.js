@@ -2,9 +2,9 @@ import Link from "next/link";
 import React from "react";
 import { useQuery } from "react-query";
 import { getCoupons } from "../../../lib/helper";
-import CouponsTableItem from "../../../components/Shared/TableItem/TableItemCoupons";
-import DashboardLayout from "../../../components/Components/DashboardLayout";
-import { useCustomQuery } from "../../../components/hooks/useMyShopData";
+import CouponsTableItem from '../../../Components/Shared/TableItem/TableItemCoupons";
+import DashboardLayout from '../../../Components/Components/DashboardLayout";
+import { useCustomQuery } from '../../../Components/hooks/useMyShopData";
 import { useState } from "react";
 
 const Coupon = () => {

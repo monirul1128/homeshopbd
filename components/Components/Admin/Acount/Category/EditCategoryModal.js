@@ -3,8 +3,8 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { ModalUpdateMethodHook } from '../../../../../lib/usePostHooks';
 import { base_url_v2 } from '../../../../../lib/helper';
-import CustomeInput from '../../../../shared/AddressInput/CustomeInput';
-import CustomButtonLoading from '../../../../shared/CustomButtonLoading';
+import CustomeInput from '../../../../Shared/AddressInput/CustomeInput';
+import CustomButtonLoading from '../../../../Shared/CustomButtonLoading';
 
 const EditCategoryModal = ({ setEditCategoryModalOpen, id, refetch, title }) => {
     const [loading, setLoading] = useState(false)

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import DashboardLayout from "../../../components/Components/DashboardLayout";
+import DashboardLayout from '../../../Components/Components/DashboardLayout";
 import Link from "next/link";
-import { useCustomQuery } from "../../../components/hooks/useMyShopData";
-import CustomPagination from "../../../components/Shared/CustomPagination";
-import BlogTable from "../../../components/Components/Admin/blog/BlogTable";
+import { useCustomQuery } from '../../../Components/hooks/useMyShopData";
+import CustomPagination from '../../../Components/Shared/CustomPagination";
+import BlogTable from '../../../Components/Components/Admin/blog/BlogTable";
 
 const Blogs = () => {
   const [searchQuery, setSearchQuery] = useState("");

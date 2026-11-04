@@ -1,6 +1,6 @@
 import React from "react";
-import SecondaryImageCover from "../../components/Shared/SecondaryImageCover";
-import AppAds from "../../components/Components/Home/AppAds/AppAds";
+import SecondaryImageCover from '../../Components/Shared/SecondaryImageCover";
+import AppAds from '../../Components/Components/Home/AppAds/AppAds";
 import { FaShareAlt, FaUserCircle } from "react-icons/fa";
 import Head from "next/head";
 import { useRouter } from "next/router";

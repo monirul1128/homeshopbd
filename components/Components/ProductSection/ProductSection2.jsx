@@ -1,8 +1,8 @@
 import Link from "next/link";
 import React, { useContext, useEffect, useState } from "react";
 import { useQuery } from "react-query";
-import LoadingComponets from '../../shared/LoadingComponets";
-import ProductCard from '../../shared/ProductCard";
+import LoadingComponets from '../../Shared/LoadingComponets";
+import ProductCard from '../../Shared/ProductCard";
 import { AiFillEye } from "react-icons/ai";
 import CreateContext from "../CreateContex";
 import { products } from "../../../lib/helper";

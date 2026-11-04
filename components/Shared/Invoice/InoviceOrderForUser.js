@@ -3,7 +3,7 @@ import React, { useContext, useRef, useState } from "react";
 import logo from "../../assets/logo.png";
 import ReactToPrint from "react-to-print";
 import { MdDoneOutline } from "react-icons/md";
-import InvoiceTableItemRow from '../../components/SuccessPayment/InvoiceTableItemRow";
+import InvoiceTableItemRow from '../../Components/SuccessPayment/InvoiceTableItemRow";
 import { convertTimestamp } from "../../../lib/convertTimestampDateAndTime";
 import QRCode from "qrcode.react";
 import { useMyShopData } from "../../hooks/useMyShopData";

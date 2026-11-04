@@ -1,5 +1,5 @@
-import AppAds from "../../components/Components/Home/AppAds/AppAds";
-import useMainDomain from "../../components/hooks/useMainDomain";
+import AppAds from '../../Components/Components/Home/AppAds/AppAds";
+import useMainDomain from '../../Components/hooks/useMainDomain";
 
 const Privacy = () => {
   const mainDomain = useMainDomain();

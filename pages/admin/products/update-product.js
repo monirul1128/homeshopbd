@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { BsCloudUploadFill } from "react-icons/bs";
-import DashboardLayout from "../../../components/Components/DashboardLayout";
+import DashboardLayout from '../../../Components/Components/DashboardLayout";
 import Image from "next/image";
 import { TagsInput } from "react-tag-input-component";
 import { useForm } from "react-hook-form";
@@ -10,16 +10,16 @@ import { useRouter } from "next/router";
 import swal from "sweetalert";
 const ReactQuill = dynamic(import("react-quill"), { ssr: false });
 import Select from "react-select";
-import AdminDashboardBreadcrumb from "../../../components/Shared/AdminDashboardBreadcrumb";
-import ColorPicker from "../../../components/Shared/ColorPicker";
-import { useCustomQuery } from "../../../components/hooks/useMyShopData";
-import CustomButtonLoading from "../../../components/Shared/CustomButtonLoading";
+import AdminDashboardBreadcrumb from '../../../Components/Shared/AdminDashboardBreadcrumb";
+import ColorPicker from '../../../Components/Shared/ColorPicker";
+import { useCustomQuery } from '../../../Components/hooks/useMyShopData";
+import CustomButtonLoading from '../../../Components/Shared/CustomButtonLoading";
 import {
   uploadImage2,
   uploadMultipleFiles,
   uploadMultipleFiles2,
 } from "../../../lib/imageUploader";
-import DropImageCom from "../../../components/Components/DropImageCom";
+import DropImageCom from '../../../Components/Components/DropImageCom";
 
 const sizeOptions = [
   { value: "Default", label: "Default" },

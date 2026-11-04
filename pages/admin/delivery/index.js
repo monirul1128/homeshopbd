@@ -1,11 +1,11 @@
 import React from "react";
-import DashboardLayout from "../../../components/Components/DashboardLayout";
-import AddDelivery from "../../../components/Components/Dlivery/AddDelivery";
-import ShowDailvery from "../../../components/Components/Dlivery/ShowDailvery";
+import DashboardLayout from '../../../Components/Components/DashboardLayout";
+import AddDelivery from '../../../Components/Components/Dlivery/AddDelivery";
+import ShowDailvery from '../../../Components/Components/Dlivery/ShowDailvery";
 import { useState } from "react";
 import { useQuery } from "react-query";
 import { shippingCost } from "../../../lib/helper";
-import LoadingComponets from "../../../components/Shared/LoadingComponets";
+import LoadingComponets from '../../../Components/Shared/LoadingComponets";
 const DeliveryIndex = () => {
   const [query, setQuery] = useState();
   const [reloader, setReloader] = useState(true);

@@ -5,7 +5,7 @@ import { Icon } from '@iconify/react';
 import CalculateItemCard from './CalculateItemCard';
 import { useMemo } from 'react';
 import { useState } from 'react';
-import CustomModal from '../../../../shared/CustomModal';
+import CustomModal from '../../../../Shared/CustomModal';
 import swal from 'sweetalert';
 import { deleteMethod } from '../../../../../lib/usePostHooks';
 import { base_url_v2 } from '../../../../../lib/helper';

@@ -9,7 +9,7 @@ import {
   convertTimestamp,
   convertTimestamp12,
 } from "../../../../lib/convertTimestampDateAndTime";
-import CustomModal from '../../../shared/CustomModal";
+import CustomModal from '../../../Shared/CustomModal";
 import ChangePassword from "./ChangePassword";
 import { RiLockPasswordFill } from "react-icons/ri";
 

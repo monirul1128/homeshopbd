@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import UserDashLayout from "../../../components/Components/userDashLayout";
+import UserDashLayout from '../../../Components/Components/userDashLayout";
 import { useForm } from "react-hook-form";
 import AuthUser from "../../../lib/AuthUser";
 import { updateMethodHook } from "../../../lib/usePostHooks";

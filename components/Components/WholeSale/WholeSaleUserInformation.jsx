@@ -15,7 +15,7 @@ import {
 import server_url from "../../../lib/config";
 import { useRouter } from "next/router";
 
-import CustomModal from '../../shared/CustomModal";
+import CustomModal from '../../Shared/CustomModal";
 import CheckoutProductItems from "../CheckoutProductItems/CheckoutProductItems";
 import CreateContext from "../CreateContex";
 import SizeAndColorInCustomeOrder from "../Admin/CustomOrder/SizeAndColorInCustomeOrder";

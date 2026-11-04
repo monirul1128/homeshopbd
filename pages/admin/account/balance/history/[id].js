@@ -1,19 +1,19 @@
 import { useRouter } from 'next/router';
 import React from 'react'
-import DashboardLayout from '../../../../../components/DashboardLayout'
+import DashboardLayout from '../../../../../Components/DashboardLayout'
 import { useState } from 'react';
 import { server_url_v2 } from '../../../../../lib/config';
 import { useEffect } from 'react';
 import { useQuery } from 'react-query';
 import { geBalanceHistory } from '../../../../../lib/helper';
 import { Icon } from '@iconify/react';
-import HistoryCard from '../../../../../components/Admin/Acount/Balance/HistoryCard';
-import LoadingComponets from '../../../../../shared/LoadingComponets';
-import AdminDashboardBreadcrumb from '../../../../../shared/AdminDashboardBreadcrumb';
+import HistoryCard from '../../../../../Components/Admin/Acount/Balance/HistoryCard';
+import LoadingComponets from '../../../../../Shared/LoadingComponets';
+import AdminDashboardBreadcrumb from '../../../../../Shared/AdminDashboardBreadcrumb';
 import { useFetchVersionTwo } from '../../../../../hooks/usePublicFetchVersionTwo';
-import CreateContext from '../../../../../components/CreateContex';
+import CreateContext from '../../../../../Components/CreateContex';
 import { useContext } from 'react';
-import FileteredHistory from '../../../../../components/Admin/Acount/Balance/FileteredHistory';
+import FileteredHistory from '../../../../../Components/Admin/Acount/Balance/FileteredHistory';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { convertTimestamp2 } from '../../../../../lib/convertTimestampDateAndTime';

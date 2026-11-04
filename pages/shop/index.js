@@ -1,18 +1,18 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useQuery } from "react-query";
 import { getCategories, products } from "../../lib/helper";
-import SliderInHeader from "../../components/Components/Home/Banner/SliderInHeader";
-import ProductCard from "../../components/Shared/ProductCard";
+import SliderInHeader from '../../Components/Components/Home/Banner/SliderInHeader";
+import ProductCard from '../../Components/Shared/ProductCard";
 import { FaSearch, FaTrashAlt } from "react-icons/fa";
 import { useForm } from "react-hook-form";
-import FilterByCategoryRow from "../../components/Components/Shop/FilterByCategoryRow";
-import FilterBySubCategory from "../../components/Components/Shop/FilterBySubCategory";
+import FilterByCategoryRow from '../../Components/Components/Shop/FilterByCategoryRow";
+import FilterBySubCategory from '../../Components/Components/Shop/FilterBySubCategory";
 import { AiFillFilter } from "react-icons/ai";
-import ShopPageDrawer from "../../components/Shared/drawer/ShopPageDrawer";
-import CreateContext from "../../components/Components/CreateContex";
-import CustomPagination from "../../components/Shared/CustomPagination";
-import LoadingComponets from "../../components/Shared/LoadingComponets";
-import CustomProductSectionSkeleton from "../../components/Components/CustomSkeleton/CustomProductSectionSkeleton";
+import ShopPageDrawer from '../../Components/Shared/drawer/ShopPageDrawer";
+import CreateContext from '../../Components/Components/CreateContex";
+import CustomPagination from '../../Components/Shared/CustomPagination";
+import LoadingComponets from '../../Components/Shared/LoadingComponets";
+import CustomProductSectionSkeleton from '../../Components/Components/CustomSkeleton/CustomProductSectionSkeleton";
 import Head from "next/head";
 import AuthUser from "../../lib/AuthUser";
 const Shop = () => {

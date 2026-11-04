@@ -5,7 +5,7 @@ import { MdOutlineEmail } from "react-icons/md";
 import SentToModal from "./SentToModal";
 import { useState } from "react";
 import { MdOutlineLocalShipping } from "react-icons/md"
-import CustomTooltip from '../../../shared/CustomTooltip";
+import CustomTooltip from '../../../Shared/CustomTooltip";
 import { Tooltip } from "react-tooltip";
 
 const ContactInfoUserOfOrder = ({ order, status, refetch }) => {

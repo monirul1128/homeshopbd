@@ -2,7 +2,7 @@ import React from "react";
 
 import dynamic from "next/dynamic";
 import { useUserData } from "../hooks/useMyShopData";
-import LoadingComponets from '../shared/LoadingComponets";
+import LoadingComponets from '../Shared/LoadingComponets";
 
 const AdminDashboardSidebar = dynamic(
   () => import("./Admin/AdminDashboardSidebar/AdminDashboardSidebar"),

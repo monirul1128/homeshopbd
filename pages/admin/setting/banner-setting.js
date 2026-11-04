@@ -2,8 +2,8 @@ import React from "react";
 import dynamic from "next/dynamic";
 import { useState } from "react";
 import { FaPlusSquare } from "react-icons/fa";
-import { useCustomQuery } from "../../../components/hooks/useMyShopData";
-import LoadingComponets from "../../../components/Shared/LoadingComponets";
+import { useCustomQuery } from '../../../Components/hooks/useMyShopData";
+import LoadingComponets from '../../../Components/Shared/LoadingComponets";
 
 const AddBanner = dynamic(
   () => import("../../../components/Components/Admin/Banner/AddBanner"),

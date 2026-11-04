@@ -1,18 +1,18 @@
 import React from "react";
-import DashboardLayout from '../../../../components/DashboardLayout";
+import DashboardLayout from '../../../../Components/DashboardLayout";
 import { useState } from "react";
-import CalculateList from '../../../../components/Admin/Acount/ExpenseCalculate/CalculateList";
-import ExCalculateOverViewCard from '../../../../shared/ExpenseCalculate/ExCalculateOverViewCard";
-import CustomHeadPart from '../../../../shared/CustomHeadPart";
+import CalculateList from '../../../../Components/Admin/Acount/ExpenseCalculate/CalculateList";
+import ExCalculateOverViewCard from '../../../../Shared/ExpenseCalculate/ExCalculateOverViewCard";
+import CustomHeadPart from '../../../../Shared/CustomHeadPart";
 import { useQuery } from "react-query";
 import { getAcount, getExpaince, getExpainceRow } from "../../../../lib/helper";
 import { useEffect } from "react";
-import LoadingComponets from '../../../../shared/LoadingComponets";
-import Reminders from '../../../../components/Admin/Acount/ExpenseCalculate/Reminders";
+import LoadingComponets from '../../../../Shared/LoadingComponets";
+import Reminders from '../../../../Components/Admin/Acount/ExpenseCalculate/Reminders";
 import { Icon } from "@iconify/react";
-import MoneyCard from '../../../../components/Admin/Acount/Balance/MoneyCard";
-import CustomModal from '../../../../shared/CustomModal";
-import AddMainExpenseCard from '../../../../components/Admin/Acount/ExpenseCalculate/AddMainExpenseCard";
+import MoneyCard from '../../../../Components/Admin/Acount/Balance/MoneyCard";
+import CustomModal from '../../../../Shared/CustomModal";
+import AddMainExpenseCard from '../../../../Components/Admin/Acount/ExpenseCalculate/AddMainExpenseCard";
 import { server_url_v2 } from "../../../../lib/config";
 
 const ExpenseCalculate = () => {

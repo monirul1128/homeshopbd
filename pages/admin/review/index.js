@@ -1,5 +1,5 @@
 import React from 'react';
-import DashboardLayout from '../../../components/Components/DashboardLayout';
+import DashboardLayout from '../../../Components/Components/DashboardLayout';
 
 const Review = () => {
     return (

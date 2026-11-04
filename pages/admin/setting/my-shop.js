@@ -3,13 +3,13 @@ import AuthUser from "../../../lib/AuthUser";
 import server_url from "../../../lib/config";
 import { singleImageUploader, uploadImage } from "../../../lib/imageUploader";
 import { updateMethodHook, updateMyShopHook } from "../../../lib/usePostHooks";
-import DashboardLayout from "../../../components/Components/DashboardLayout";
-import AdminDashboardBreadcrumb from "../../../components/Shared/AdminDashboardBreadcrumb";
+import DashboardLayout from '../../../Components/Components/DashboardLayout";
+import AdminDashboardBreadcrumb from '../../../Components/Shared/AdminDashboardBreadcrumb";
 import { useForm } from "react-hook-form";
 import { getMyShopData } from "../../../lib/helper";
 import { useQuery } from "react-query";
 import Image from "next/image";
-import CustomButtonLoading from "../../../components/Shared/CustomButtonLoading";
+import CustomButtonLoading from '../../../Components/Shared/CustomButtonLoading";
 const MyShop = () => {
   const [imageUrl, setImageUrl] = useState(null);
   const [imageUrl2, setImageUrl2] = useState(null);

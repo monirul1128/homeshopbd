@@ -1,5 +1,5 @@
 import React from "react";
-import useMainDomain from "../components/hooks/useMainDomain";
+import useMainDomain from '../Components/hooks/useMainDomain";
 
 const WarrantyPolicy = () => {
   const mainDomain = useMainDomain();

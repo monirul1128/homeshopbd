@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
-import CreateContext from '../components/CreateContex";
+import CreateContext from '../Components/CreateContex";
 
 const RichText = () => {
   const { richText, setValueOfRichText } = useContext(CreateContext);

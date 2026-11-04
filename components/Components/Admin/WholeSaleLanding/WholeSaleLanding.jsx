@@ -4,7 +4,7 @@ import { BsCloudUploadFill } from "react-icons/bs";
 import { updateMethodHook } from "../../../../lib/usePostHooks";
 import { server_url_v3 } from "../../../../lib/config";
 import { useFetchVersionTwo } from "../../../hooks/usePublicFetchVersionTwo";
-import LoadingComponets from '../../../shared/LoadingComponets";
+import LoadingComponets from '../../../Shared/LoadingComponets";
 import ForWhom from "./ForWhom";
 import WhyForYou from "./WhyForYou";
 import WhyForYou2 from "./WhyForYou2";

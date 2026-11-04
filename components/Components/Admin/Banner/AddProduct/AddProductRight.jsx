@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { useQuery } from "react-query";
 import { getCategories, products } from "../../../../../lib/helper";
 import { MdOutlineUnfoldMore } from "react-icons/md";
-import SelectProductItem from '../../../../shared/drawer/SelectProductItem";
-import SelectProductItemAll from '../../../../shared/drawer/SelectProductItemAll";
+import SelectProductItem from '../../../../Shared/drawer/SelectProductItem";
+import SelectProductItemAll from '../../../../Shared/drawer/SelectProductItemAll";
 
 const AddProductRight = ({ getProductId, setGetProductId }) => {
   const [queryFilterPrice, setQueryFilterPrice] = useState("");
