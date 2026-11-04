@@ -8,7 +8,7 @@ import { MdDoneOutline } from "react-icons/md";
 import CreateContext from '../../../components/Components/CreateContex';
 import QRCode from "qrcode.react";
 import { useMyShopData } from '../../../components/hooks/useMyShopData';
-import RequireAuth from '../../../components/Components/RequireAuth/RequireAuth';
+import RequireAuth from '../../../components/RequireAuth/RequireAuth';
 import { AiFillPrinter } from "react-icons/ai";
 import { useRouter } from "next/router";
 import { useQuery } from "react-query";

@@ -21,7 +21,7 @@ import swal from "sweetalert";
 import CheckoutProductItemsDirectBuy from '../../../components/Components/CheckoutProductItems/CheckoutProductItemsDirectBuy';
 import SizeAndColorInCheckout from '../../../components/Components/CheckoutProductItems/SizeAndColorInCheckout';
 import SizeAndColorInCheckoutDirectBuy from '../../../components/Components/CheckoutProductItems/SizeAndColorInCheckoutDirectBuy';
-import RequireAuth from '../../../components/Components/RequireAuth/RequireAuth';
+import RequireAuth from '../../../components/RequireAuth/RequireAuth';
 import useFacebookPixel from '../../../components/hooks/useFacebookPixel';
 import BDAutoCity from '../../../components/Components/BDAutoCity';
 import { useQuery } from "react-query";
