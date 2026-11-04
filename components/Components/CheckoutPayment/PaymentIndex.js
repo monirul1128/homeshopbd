@@ -11,7 +11,7 @@ import { usePostOrder, usePostOrder2 } from "../../../lib/usePostOrder";
 import server_url from "../../../lib/config";
 import CreateContext from "../CreateContex";
 import axios from "axios";
-import { useUserData } from "../../hooks/useMyShopData";
+import { useUserData } from "../../components/hooks/useMyShopData";
 const PaymentIndex = ({ order, direct = false }) => {
   const [method, setMethod] = useState("");
   const [isClickMethod, setIsClickMethod] = useState(false);

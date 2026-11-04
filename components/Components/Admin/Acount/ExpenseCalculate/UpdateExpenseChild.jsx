@@ -1,6 +1,6 @@
 import React from 'react'
 import { useForm } from 'react-hook-form';
-import CustomeInput from '../../../../Shared/AddressInput/CustomeInput';
+import CustomeInput from '../../../../components/Shared/AddressInput/CustomeInput';
 import { useState } from 'react';
 import { ModalPostMethodHook, ModalUpdateMethodHook } from '../../../../../lib/usePostHooks';
 import { base_url_v2 } from '../../../../../lib/helper';
@@ -8,7 +8,7 @@ import { useEffect } from 'react';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { convertTimestamp, convertTimestamp2 } from '../../../../../lib/convertTimestampDateAndTime';
-import CustomButtonLoading from '../../../../Shared/CustomButtonLoading';
+import CustomButtonLoading from '../../../../components/Shared/CustomButtonLoading';
 
 
 

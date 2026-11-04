@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useQuery } from "react-query";
 import { MdOutlineUnfoldMore } from "react-icons/md";
 import { getCategories, products } from "../../../../lib/helper";
-import SelectProductItemAll from '../../../Shared/drawer/SelectProductItemAll";
+import SelectProductItemAll from '../../../components/Shared/drawer/SelectProductItemAll';
 
 
 const FlashProductRight = ({ getProductId, setGetProductId }) => {

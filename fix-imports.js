@@ -8,11 +8,11 @@ function fixImportsInFile(filePath) {
 
     // Replace all ../src/ paths with ../components/
     const replacements = [
-      { from: /from ["']\.\.\/src\/Components/g, to: 'from '../Components/Components' },
-      { from: /from ["']\.\.\/src\/Shared/g, to: 'from '../Components/Shared' },
-      { from: /from ["']\.\.\/src\/hooks/g, to: 'from '../Components/hooks' },
-      { from: /from ["']\.\.\/src\/assets/g, to: 'from '../Components/assets' },
-      { from: /from ["']\.\.\/src\/RequireAuth/g, to: 'from '../Components/RequireAuth' },
+      { from: /from ["']\.\.\/src\/Components/g, to: 'from '../components/Components/Components' },
+      { from: /from ["']\.\.\/src\/Shared/g, to: 'from '../components/Components/Shared' },
+      { from: /from ["']\.\.\/src\/hooks/g, to: 'from '../components/Components/hooks' },
+      { from: /from ["']\.\.\/src\/assets/g, to: 'from '../components/Components/assets' },
+      { from: /from ["']\.\.\/src\/RequireAuth/g, to: 'from '../components/Components/RequireAuth' },
     ];
 
     replacements.forEach(({ from, to }) => {

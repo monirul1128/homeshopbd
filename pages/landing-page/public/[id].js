@@ -1,8 +1,8 @@
 import React from "react";
-import Header from '../../../Components/Components/Admin/LandingPage/Header";
-import GalarySection from '../../../Components/Components/Admin/LandingPage/GalarySection";
-import Features from '../../../Components/Components/Admin/LandingPage/Features";
-import CheckOut from '../../../Components/Components/Admin/LandingPage/CheckOut";
+import Header from '../../../components/Components/Components/Admin/LandingPage/Header';
+import GalarySection from '../../../components/Components/Components/Admin/LandingPage/GalarySection';
+import Features from '../../../components/Components/Components/Admin/LandingPage/Features';
+import CheckOut from '../../../components/Components/Components/Admin/LandingPage/CheckOut';
 
 const SingleLandingPage = ({ page }) => {
   return (

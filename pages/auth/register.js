@@ -4,8 +4,8 @@ import { useForm } from "react-hook-form";
 import AuthUser from "../../lib/AuthUser";
 import CreateUserHook from "../../lib/CreateUserHook";
 import { useContext, useState } from "react";
-import CustomButtonLoading from '../../Components/Shared/CustomButtonLoading";
-import CreateContext from '../../Components/Components/CreateContex";
+import CustomButtonLoading from '../../components/Components/Shared/CustomButtonLoading';
+import CreateContext from '../../components/Components/Components/CreateContex';
 
 const Register = () => {
   const { getToken, setToken } = AuthUser();

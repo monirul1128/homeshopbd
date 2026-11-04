@@ -3,7 +3,7 @@ import { BsCheck2 } from "react-icons/bs";
 import { MdAddShoppingCart } from "react-icons/md";
 import Image from "next/image";
 import { FaCommentsDollar, FaPiggyBank, FaTruck } from "react-icons/fa";
-import BreadCrumb from '../../Components/Shared/Breadcrumb";
+import BreadCrumb from '../../components/Components/Shared/Breadcrumb';
 
 const images = [
   {

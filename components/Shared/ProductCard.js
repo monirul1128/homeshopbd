@@ -1,14 +1,14 @@
 import Image from "next/image";
 import { useContext, useState } from "react";
 import { MdAddShoppingCart } from "react-icons/md";
-import CreateContext from '../Components/CreateContex";
+import CreateContext from '../components/Components/CreateContex';
 import setCartInLocalStorage from "../../lib/setCartInLocalStorage";
-import AlreadyProductHave from '../Components/Home/PopularProducts/AlreadyProductHave";
+import AlreadyProductHave from '../components/Components/Home/PopularProducts/AlreadyProductHave';
 import { AiOutlineHeart } from "react-icons/ai";
 import setWishlistInLocalStorage from "../../lib/setWishlistInLocalStorage";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import useFacebookPixel from "../hooks/useFacebookPixel";
+import useFacebookPixel from "../components/hooks/useFacebookPixel";
 import { Icon } from "@iconify/react";
 
 const ProductCard = ({ product }) => {

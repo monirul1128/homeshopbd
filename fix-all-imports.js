@@ -8,9 +8,9 @@ function fixAllImports(filePath) {
 
     // Fix all ../src/ paths to ../components/
     const patterns = [
-      { from: /from ["']\.\.\/src\//g, to: 'from '../Components/' },
-      { from: /from ["']\.\.\/\.\.\/src\//g, to: 'from '../../Components/' },
-      { from: /from ["']\.\.\/\.\.\/\.\.\/src\//g, to: 'from '../../../Components/' },
+      { from: /from ["']\.\.\/src\//g, to: 'from '../components/Components/' },
+      { from: /from ["']\.\.\/\.\.\/src\//g, to: 'from '../../components/Components/' },
+      { from: /from ["']\.\.\/\.\.\/\.\.\/src\//g, to: 'from '../../../components/Components/' },
     ];
 
     patterns.forEach(({ from, to }) => {

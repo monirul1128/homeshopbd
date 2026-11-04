@@ -3,7 +3,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import server_url from "../../../../lib/config";
 import { deleteMethod, updateMethodHook } from "../../../../lib/usePostHooks";
-import CustomModal from '../../../Shared/CustomModal";
+import CustomModal from '../../../components/Shared/CustomModal';
 import EditBrandInfo from "./EditBrandInfo";
 
 const BrandTableRow = ({ brand, index, refetch }) => {

@@ -1,6 +1,6 @@
 import { useQuery } from "react-query";
 import { products } from "../../../../lib/helper";
-import ProductCard from '../../../Shared/ProductCard";
+import ProductCard from '../../../components/Shared/ProductCard';
 import DiscountProductItem from "./DiscountProductItem";
 
 const DiscountProducts = () => {

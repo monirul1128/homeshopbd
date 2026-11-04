@@ -1,21 +1,21 @@
 import React from "react";
-import DashboardLayout from '../../../../Components/DashboardLayout";
+import DashboardLayout from '../../../../components/Components/DashboardLayout';
 import { Icon } from "@iconify/react";
-import CustomModal from '../../../../Shared/CustomModal";
+import CustomModal from '../../../../components/Shared/CustomModal';
 import { useState } from "react";
-import AddBalance from '../../../../Components/Admin/Acount/Balance/AddBalance";
-import BalanceCard from '../../../../Components/Admin/Acount/Balance/BalanceCard";
+import AddBalance from '../../../../components/Components/Admin/Acount/Balance/AddBalance';
+import BalanceCard from '../../../../components/Components/Admin/Acount/Balance/BalanceCard';
 import { useQuery } from "react-query";
 import { getAccountingOverview, getAcount } from "../../../../lib/helper";
-import LoadingComponets from '../../../../Shared/LoadingComponets";
+import LoadingComponets from '../../../../components/Shared/LoadingComponets';
 import { server_url_v2 } from "../../../../lib/config";
-import TodayDueExpense from '../../../../Components/Admin/Acount/TodaysExpense/TodayDueExpense";
-import AdminDashboardBreadcrumb from '../../../../Shared/AdminDashboardBreadcrumb";
-import MoneyCard from '../../../../Components/Admin/Acount/Balance/MoneyCard";
+import TodayDueExpense from '../../../../components/Components/Admin/Acount/TodaysExpense/TodayDueExpense';
+import AdminDashboardBreadcrumb from '../../../../components/Shared/AdminDashboardBreadcrumb';
+import MoneyCard from '../../../../components/Components/Admin/Acount/Balance/MoneyCard';
 import DatePicker from "react-datepicker";
 import { useEffect } from "react";
 import { convertTimestamp2 } from "../../../../lib/convertTimestampDateAndTime";
-import ExpenseIncomeAdd from '../../../../Components/Admin/Acount/Category/ExpenseIncomeAdd";
+import ExpenseIncomeAdd from '../../../../components/Components/Admin/Acount/Category/ExpenseIncomeAdd';
 
 const Balance = () => {
   const [show, setShow] = useState(false);

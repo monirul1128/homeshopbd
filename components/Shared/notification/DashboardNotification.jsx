@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { IoNotificationsOutline } from "react-icons/io5";
-import { useCustomQuery } from "../../hooks/useMyShopData";
+import { useCustomQuery } from "../../components/hooks/useMyShopData";
 import Image from "next/image";
 import userImage from "../../assets/image/user.jpg";
 import moment from "moment/moment";

@@ -1,9 +1,9 @@
 import React from 'react';
-import DashboardLayout from '../../../Components/Components/DashboardLayout';
+import DashboardLayout from '../../../components/Components/Components/DashboardLayout';
 import Link from 'next/link';
 import { Icon } from '@iconify/react';
-import { useFetchVersionTwo } from '../../../Components/hooks/usePublicFetchVersionTwo';
-import AllPageData from '../../../Components/Components/Admin/LandingPage/AllPageData';
+import { useFetchVersionTwo } from '../../../components/Components/hooks/usePublicFetchVersionTwo';
+import AllPageData from '../../../components/Components/Components/Admin/LandingPage/AllPageData';
 
 const index = () => {
     const { data: pages, isLoading, refetch } = useFetchVersionTwo(['landing-page'], 'landing-page')

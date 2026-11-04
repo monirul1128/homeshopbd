@@ -1,8 +1,8 @@
 import React from "react";
-import AppAds from '../../Components/Components/Home/AppAds/AppAds";
-import SecondaryImageCover from '../../Components/Shared/SecondaryImageCover";
+import AppAds from '../../components/Components/Components/Home/AppAds/AppAds';
+import SecondaryImageCover from '../../components/Components/Shared/SecondaryImageCover';
 import prisma from "../../lib/prisma";
-import BlogSection from '../../Components/Components/Admin/blog/BlogSection";
+import BlogSection from '../../components/Components/Components/Admin/blog/BlogSection';
 
 export async function getStaticProps() {
   try {

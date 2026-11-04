@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { Tooltip } from 'react-tooltip';
 import { server_url_v2 } from '../../../../../lib/config';
 import { CustomPostMethodHook, deleteMethod } from '../../../../../lib/usePostHooks';
-import CustomModal from '../../../../Shared/CustomModal';
+import CustomModal from '../../../../components/Shared/CustomModal';
 import AddExpense from '../Category/AddExpense';
 import ChangeExpenseDate from './ChangeExpenseDate';
 import { convertTimestamp } from '../../../../../lib/convertTimestampDateAndTime';

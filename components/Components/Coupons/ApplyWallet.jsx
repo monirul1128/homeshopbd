@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FaRegPaperPlane } from "react-icons/fa";
-import { useMyShopData } from "../../hooks/useMyShopData";
+import { useMyShopData } from "../../components/hooks/useMyShopData";
 
 const ApplyWallet = ({
   data,

@@ -2,7 +2,7 @@ import React from "react";
 import { convertTimestamp } from "../../../../../lib/convertTimestampDateAndTime";
 import { Icon } from "@iconify/react";
 import { useState } from "react";
-import CustomModal from '../../../../Shared/CustomModal";
+import CustomModal from '../../../../components/Shared/CustomModal';
 import ReturnBalanceModal from "../Category/ReturnBalanceModal";
 import { server_url_v2 } from "../../../../../lib/config";
 import { useEffect } from "react";

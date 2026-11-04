@@ -7,7 +7,7 @@ import "react-modern-drawer/dist/index.css";
 import CartProductItems from "./CartProductItems";
 import LoadingComponets from "../LoadingComponets";
 import Link from "next/link";
-import CreateContext from '../../Components/CreateContex";
+import CreateContext from '../../components/Components/CreateContex';
 import { useRouter } from "next/router";
 
 const CartDrawer = ({ isOpen, toggleDrawer, dir, products }) => {

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import DashboardCardDesign from '../../../Components/Shared/Dashboard/DashboardOverview/DashboardCardDesign";
+import DashboardCardDesign from '../../../components/Components/Shared/Dashboard/DashboardOverview/DashboardCardDesign';
 import { MdFindInPage } from "react-icons/md";
 import { useQuery } from "react-query";
 import { Icon } from "@iconify/react";

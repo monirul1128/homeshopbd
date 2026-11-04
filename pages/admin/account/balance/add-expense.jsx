@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import DashboardLayout from '../../../../Components/DashboardLayout";
-import AdminDashboardBreadcrumb from '../../../../Shared/AdminDashboardBreadcrumb";
-import ExpenseIncomeAdd from '../../../../Components/Admin/Acount/Category/ExpenseIncomeAdd";
-import ExpenseIncomeTableData from '../../../../Components/Admin/Acount/TodaysExpense/ExpenseIncomeTableData";
-import LoadingComponets from '../../../../Shared/LoadingComponets";
+import DashboardLayout from '../../../../components/Components/DashboardLayout';
+import AdminDashboardBreadcrumb from '../../../../components/Shared/AdminDashboardBreadcrumb';
+import ExpenseIncomeAdd from '../../../../components/Components/Admin/Acount/Category/ExpenseIncomeAdd';
+import ExpenseIncomeTableData from '../../../../components/Components/Admin/Acount/TodaysExpense/ExpenseIncomeTableData';
+import LoadingComponets from '../../../../components/Shared/LoadingComponets';
 import { server_url_v2 } from "../../../../lib/config";
 import { useQuery } from "react-query";
 import { geBalanceHistory } from "../../../../lib/helper";

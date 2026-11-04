@@ -36,7 +36,7 @@ function fixImportsInFile(filePath) {
     content = content.replace(/from\s+['"]((\.\.\/)+)shared\//g, 'from \'$1Shared/');
     
     // These are already correct
-    // from '../../../Components/hooks/' is correct
+    // from '../../../components/Components/hooks/' is correct
     
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');

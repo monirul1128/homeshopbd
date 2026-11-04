@@ -11,7 +11,7 @@ import RequireAuth from "../RequireAuth/RequireAuth";
 import { RiListUnordered } from "react-icons/ri";
 import { MdOutlineNotificationsActive, MdOutlineOndemandVideo, MdPayments } from "react-icons/md";
 import { CiShop } from "react-icons/ci";
-import { useCustomQuery, useMyShopData } from "../hooks/useMyShopData";
+import { useCustomQuery, useMyShopData } from "../components/hooks/useMyShopData";
 import axios from "axios";
 import server_url from "../../lib/config";
 import CreateContext from "./CreateContex";

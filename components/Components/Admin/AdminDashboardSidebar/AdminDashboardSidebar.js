@@ -1,6 +1,6 @@
 import React from "react";
 import AuthUser from "../../../../lib/AuthUser";
-import { useCustomQuery } from "../../../hooks/useMyShopData";
+import { useCustomQuery } from "../../../components/hooks/useMyShopData";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";

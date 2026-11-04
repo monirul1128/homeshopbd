@@ -1,8 +1,8 @@
 import Image from "next/image";
-import AppAds from '../../Components/Components/Home/AppAds/AppAds";
-import NewsLetter from '../../Components/Components/Home/NewsLetter/NewsLetter";
-import { useMyShopData } from '../../Components/hooks/useMyShopData";
-import useMainDomain from '../../Components/hooks/useMainDomain";
+import AppAds from '../../components/Components/Components/Home/AppAds/AppAds';
+import NewsLetter from '../../components/Components/Components/Home/NewsLetter/NewsLetter';
+import { useMyShopData } from '../../components/Components/hooks/useMyShopData';
+import useMainDomain from '../../components/Components/hooks/useMainDomain';
 
 const Terms = () => {
   const { data } = useMyShopData();

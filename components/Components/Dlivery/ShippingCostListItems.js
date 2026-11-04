@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import server_url from "../../../lib/config";
 import { deleteMethodHook } from "../../../lib/deleteMethodHook";
-import CustomModal from '../../Shared/CustomModal";
+import CustomModal from '../../components/Shared/CustomModal';
 import EditDelivery from "./EditDelivery";
 
 const ShippingCostListItems = ({ shippingItem, index, refetch }) => {

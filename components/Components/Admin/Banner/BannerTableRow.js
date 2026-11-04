@@ -3,7 +3,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import server_url from "../../../../lib/config";
 import { deleteMethod, updateMethodHook } from "../../../../lib/usePostHooks";
-import CustomModal from '../../../Shared/CustomModal";
+import CustomModal from '../../../components/Shared/CustomModal';
 import EditBannerInfo from "./EditBannerInfo";
 import EditBannerPostion from "./EditBannerPostion";
 import { useRouter } from "next/router";

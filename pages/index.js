@@ -3,13 +3,13 @@ import { useEffect, useState, useCallback } from "react";
 import server_url from "../lib/config";
 import AuthUser from "../lib/AuthUser";
 import { updateMethodHook55 } from "../lib/usePostHooks";
-import Banner from '../Components/Components/Home/Banner/Banner";
-import Category from '../Components/Components/Home/Category/Category";
-import FlashProductSection from '../Components/Components/ProductSection/FlashProductSection";
-import ProductSection from '../Components/Components/ProductSection/ProductSection";
-import OurBrand from '../Components/Shared/OurBrand";
-import NewsLetter from '../Components/Components/Home/NewsLetter/NewsLetter";
-import AppAds from '../Components/Components/Home/AppAds/AppAds";
+import Banner from '../components/Components/Components/Home/Banner/Banner';
+import Category from '../components/Components/Components/Home/Category/Category';
+import FlashProductSection from '../components/Components/Components/ProductSection/FlashProductSection';
+import ProductSection from '../components/Components/Components/ProductSection/ProductSection';
+import OurBrand from '../components/Components/Shared/OurBrand';
+import NewsLetter from '../components/Components/Components/Home/NewsLetter/NewsLetter';
+import AppAds from '../components/Components/Components/Home/AppAds/AppAds';
 import prisma from "../lib/prisma";
 
 export async function getStaticProps() {

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { useQuery } from "react-query";
 import { getOrderList } from "../../../lib/helper";
-import UserOrderTableRow from '../../../Components/Components/User/UserOrderTableRow";
-import UserDashLayout from '../../../Components/Components/userDashLayout";
-import CustomModal from '../../../Components/Shared/CustomModal";
-import InoviceOrderForUser from '../../../Components/Shared/Invoice/InoviceOrderForUser";
+import UserOrderTableRow from '../../../components/Components/Components/User/UserOrderTableRow';
+import UserDashLayout from '../../../components/Components/Components/userDashLayout';
+import CustomModal from '../../../components/Components/Shared/CustomModal';
+import InoviceOrderForUser from '../../../components/Components/Shared/Invoice/InoviceOrderForUser';
 import AuthUser from "../../../lib/AuthUser";
 import { useEffect } from "react";
 const MyOrderList = () => {

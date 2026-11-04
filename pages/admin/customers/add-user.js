@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import DashboardLayout from '../../../Components/Components/DashboardLayout";
-import AdminDashboardBreadcrumb from '../../../Components/Shared/AdminDashboardBreadcrumb";
+import DashboardLayout from '../../../components/Components/Components/DashboardLayout';
+import AdminDashboardBreadcrumb from '../../../components/Components/Shared/AdminDashboardBreadcrumb';
 import { useForm } from "react-hook-form";
 import { singleImageUploader, uploadImage } from "../../../lib/imageUploader";
 import server_url from "../../../lib/config";
 import { postMethodHook } from "../../../lib/usePostHooks";
-import CustomButtonLoading from '../../../Components/Shared/CustomButtonLoading";
+import CustomButtonLoading from '../../../components/Components/Shared/CustomButtonLoading';
 const AddUser = () => {
   const [imageUrl, setImageUrl] = useState(null);
   const [imageUploadErrorMessage, setImageUploadErrorMessage] = useState(null);

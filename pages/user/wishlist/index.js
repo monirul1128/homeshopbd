@@ -1,5 +1,5 @@
 import React from "react";
-import UserDashLayout from '../../../Components/Components/userDashLayout";
+import UserDashLayout from '../../../components/Components/Components/userDashLayout';
 
 const index = () => {
   return (

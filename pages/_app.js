@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
 import { QueryClient, QueryClientProvider } from "react-query";
 import "regenerator-runtime/runtime";
-import CreateContext from '../Components/Components/CreateContex";
-import Layout from '../Components/Components/Layout";
+import CreateContext from '../components/Components/Components/CreateContex';
+import Layout from '../components/Components/Components/Layout';
 import "react-quill/dist/quill.snow.css";
 import "../styles/globals.css";
 import "react-modern-drawer/dist/index.css";
 import "chart.js";
 import { useRouter } from "next/router";
 import useSiteApiSettingUpdateWithFetch from "../lib/useSiteApiSettingUpdateWithFetch";
-import { useUserData } from '../Components/hooks/useMyShopData";
+import { useUserData } from '../components/Components/hooks/useMyShopData';
 
 const queryClient = new QueryClient();
 

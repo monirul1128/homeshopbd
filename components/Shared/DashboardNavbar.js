@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import AuthUser from "../../lib/AuthUser";
-import { useCustomQuery, useMyShopData } from "../hooks/useMyShopData";
+import { useCustomQuery, useMyShopData } from "../components/hooks/useMyShopData";
 import userImage from "../assets/image/user.jpg";
 import { IoNotificationsOutline } from "react-icons/io5";
 import DashboardNotification from "./notification/DashboardNotification";

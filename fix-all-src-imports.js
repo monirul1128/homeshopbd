@@ -27,9 +27,9 @@ function fixImportsInFile(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
     
-    // Pattern 1: from '../../../Components -> from "../../../components
-    // Pattern 2: from '../../../../Shared -> from "../../../../Shared
-    // Pattern 3: from '../hooks -> from "../hooks
+    // Pattern 1: from '../../../Components -> from '../../../components
+    // Pattern 2: from '../../../../Shared -> from '../../../../Shared
+    // Pattern 3: from '../hooks -> from '../hooks
     
     // Replace all variations of ../src/ with ../ (removing the src part)
     content = content.replace(/from\s+['"]((?:\.\.\/)+)src\//g, 'from \'$1');

@@ -1,12 +1,12 @@
 import React from "react";
-import DashboardLayout from '../../../Components/Components/DashboardLayout";
-import Users from '../../../Components/Components/Admin/CustomOrder/Users";
+import DashboardLayout from '../../../components/Components/Components/DashboardLayout';
+import Users from '../../../components/Components/Components/Admin/CustomOrder/Users';
 import { useState } from "react";
-import UserInformation from '../../../Components/Components/Admin/CustomOrder/UserInformation";
+import UserInformation from '../../../components/Components/Components/Admin/CustomOrder/UserInformation';
 import { Icon } from "@iconify/react";
-import CustomModal from '../../../Components/Shared/CustomModal";
-import SelectProduct from '../../../Components/Components/Admin/CustomOrder/SelectProduct";
-import ProductDrawer from '../../../Components/Shared/drawer/ProductDrawer";
+import CustomModal from '../../../components/Components/Shared/CustomModal';
+import SelectProduct from '../../../components/Components/Components/Admin/CustomOrder/SelectProduct';
+import ProductDrawer from '../../../components/Components/Shared/drawer/ProductDrawer';
 
 const index = () => {
   const [selectedUser, setSelectedUser] = useState({});

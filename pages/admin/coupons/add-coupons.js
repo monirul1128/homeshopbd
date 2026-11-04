@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import DashboardLayout from '../../../Components/Components/DashboardLayout";
+import DashboardLayout from '../../../components/Components/Components/DashboardLayout';
 import Image from "next/image";
 import { BsCloudUploadFill } from "react-icons/bs";
 import { TagsInput } from "react-tag-input-component";
-import AdminDashboardBreadcrumb from '../../../Components/Shared/AdminDashboardBreadcrumb";
+import AdminDashboardBreadcrumb from '../../../components/Components/Shared/AdminDashboardBreadcrumb';
 import {
   singleImageUploader,
   uploadImage,
@@ -17,7 +17,7 @@ import server_url from "../../../lib/config";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { convertTimestamp2 } from "../../../lib/convertTimestampDateAndTime";
-import CustomButtonLoading from '../../../Components/Shared/CustomButtonLoading";
+import CustomButtonLoading from '../../../components/Components/Shared/CustomButtonLoading';
 
 const AddCategory = () => {
   const {

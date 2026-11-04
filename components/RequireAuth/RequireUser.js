@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import AuthUser from "../../lib/AuthUser";
-import { useUserData } from "../hooks/useMyShopData";
+import { useUserData } from "../components/hooks/useMyShopData";
 
 const RequireUser = (WrappedComponent) => {
   const Wrapper = (props) => {

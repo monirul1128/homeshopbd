@@ -1,4 +1,4 @@
-import PaymentNav from '../../Components/Components/Payment/PaymentNav";
+import PaymentNav from '../../components/Components/Components/Payment/PaymentNav';
 
 const payment = () => {
   return (

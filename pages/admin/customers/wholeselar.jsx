@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-import DashboardLayout from '../../../Components/Components/DashboardLayout";
-import ReSelarUser from '../../../Components/Components/ManageUsers/AllUsers/ReSelarUser";
+import DashboardLayout from '../../../components/Components/Components/DashboardLayout';
+import ReSelarUser from '../../../components/Components/Components/ManageUsers/AllUsers/ReSelarUser';
 
 const Customers = () => {
   return (

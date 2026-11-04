@@ -1,12 +1,12 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import CustomeInput from '../../../../Shared/AddressInput/CustomeInput";
+import CustomeInput from '../../../../components/Shared/AddressInput/CustomeInput';
 import { useState } from "react";
 import {
   ModalPostMethodHook,
   postMethodHook,
 } from "../../../../../lib/usePostHooks";
-import CustomButtonLoading from '../../../../Shared/CustomButtonLoading";
+import CustomButtonLoading from '../../../../components/Shared/CustomButtonLoading';
 
 const AddBalance = ({ refetch, setBalanceAddShow }) => {
   const [bgColor, setBgColor] = useState("#7F1D1D");

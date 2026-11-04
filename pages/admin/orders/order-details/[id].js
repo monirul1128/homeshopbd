@@ -1,14 +1,14 @@
 import React from "react";
-import DashboardLayout from '../../../../Components/DashboardLayout";
+import DashboardLayout from '../../../../components/Components/DashboardLayout';
 import { useRouter } from "next/router";
 import { getOrderById } from "../../../../lib/helper";
 import { useQuery } from "react-query";
-import LoadingComponets from '../../../../Shared/LoadingComponets";
-import UserProfileOfOrder from '../../../../Components/Admin/OrderDetails/UserProfileOfOrder";
-import ContactInfoUserOfOrder from '../../../../Components/Admin/OrderDetails/ContactInfoUserOfOrder";
-import OrderPaymentInfo from '../../../../Components/Admin/OrderDetails/OrderPaymentInfo";
-import InvoiceTableItemRow from '../../../../Components/SuccessPayment/InvoiceTableItemRow";
-import AdminDashboardBreadcrumb from '../../../../Shared/AdminDashboardBreadcrumb";
+import LoadingComponets from '../../../../components/Shared/LoadingComponets';
+import UserProfileOfOrder from '../../../../components/Components/Admin/OrderDetails/UserProfileOfOrder';
+import ContactInfoUserOfOrder from '../../../../components/Components/Admin/OrderDetails/ContactInfoUserOfOrder';
+import OrderPaymentInfo from '../../../../components/Components/Admin/OrderDetails/OrderPaymentInfo';
+import InvoiceTableItemRow from '../../../../components/Components/SuccessPayment/InvoiceTableItemRow';
+import AdminDashboardBreadcrumb from '../../../../components/Shared/AdminDashboardBreadcrumb';
 
 const OrderDetailsPage = () => {
   const router = useRouter();
