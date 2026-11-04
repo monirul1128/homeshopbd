@@ -1,11 +1,11 @@
 import React from 'react';
 
 
-import Header from '../../../../src/Components/Admin/LandingPage/Header';
-import DashboardLayout from '../../../../src/Components/DashboardLayout';
-import GalarySection from '../../../../src/Components/Admin/LandingPage/GalarySection';
-import Features from '../../../../src/Components/Admin/LandingPage/Features';
-import CheckOut from '../../../../src/Components/Admin/LandingPage/CheckOut';
+import Header from '../../../../Components/Admin/LandingPage/Header';
+import DashboardLayout from '../../../../Components/DashboardLayout';
+import GalarySection from '../../../../Components/Admin/LandingPage/GalarySection';
+import Features from '../../../../Components/Admin/LandingPage/Features';
+import CheckOut from '../../../../Components/Admin/LandingPage/CheckOut';
 
 const ViewPage = ({ page }) => {
     return (

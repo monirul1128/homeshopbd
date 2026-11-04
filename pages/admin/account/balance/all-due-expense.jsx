@@ -1,7 +1,7 @@
 import React from "react";
-import AdminDashboardBreadcrumb from "../../../../src/Shared/AdminDashboardBreadcrumb";
-import AllExpense from "../../../../src/Components/Admin/Acount/TodaysExpense/AllExpense";
-import DashboardLayout from "../../../../src/Components/DashboardLayout";
+import AdminDashboardBreadcrumb from '../../../../Shared/AdminDashboardBreadcrumb";
+import AllExpense from '../../../../Components/Admin/Acount/TodaysExpense/AllExpense";
+import DashboardLayout from '../../../../Components/DashboardLayout";
 
 const ALLDueExpense = () => {
   return (

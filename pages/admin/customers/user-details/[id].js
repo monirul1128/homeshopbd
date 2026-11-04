@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import DashboardLayout from "../../../../src/Components/DashboardLayout";
-import AdminDashboardBreadcrumb from "../../../../src/Shared/AdminDashboardBreadcrumb";
+import DashboardLayout from '../../../../Components/DashboardLayout";
+import AdminDashboardBreadcrumb from '../../../../Shared/AdminDashboardBreadcrumb";
 import { useForm } from "react-hook-form";
 import { singleImageUploader } from "../../../../lib/imageUploader";
 import server_url from "../../../../lib/config";
@@ -9,9 +9,9 @@ import { useQuery } from "react-query";
 import { useRouter } from "next/router";
 import { getOrderList, getUsersById } from "../../../../lib/helper";
 import Image from "next/image";
-import LoadingComponets from "../../../../src/Shared/LoadingComponets";
-import DasboardOrderTable from "../../../../src/Components/User/DasboardOrderTable";
-import DashboardOrderTableRow from "../../../../src/Components/User/DashboardOrderTableRow";
+import LoadingComponets from '../../../../Shared/LoadingComponets";
+import DasboardOrderTable from '../../../../Components/User/DasboardOrderTable";
+import DashboardOrderTableRow from '../../../../Components/User/DashboardOrderTableRow";
 const UserDetails = () => {
   const router = useRouter();
   const { id } = router.query;

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import DashboardLayout from "../../../../src/Components/DashboardLayout";
-import AdminDashboardBreadcrumb from "../../../../src/Shared/AdminDashboardBreadcrumb";
-import AddProductLeft from "../../../../src/Components/Admin/Banner/AddProduct/AddProductLeft";
-import AddProductRight from "../../../../src/Components/Admin/Banner/AddProduct/AddProductRight";
+import DashboardLayout from '../../../../Components/DashboardLayout";
+import AdminDashboardBreadcrumb from '../../../../Shared/AdminDashboardBreadcrumb";
+import AddProductLeft from '../../../../Components/Admin/Banner/AddProduct/AddProductLeft";
+import AddProductRight from '../../../../Components/Admin/Banner/AddProduct/AddProductRight";
 import { useRouter } from "next/router";
 
 const BannerProduct = () => {

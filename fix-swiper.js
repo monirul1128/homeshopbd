@@ -6,7 +6,7 @@ function fixSwiperImports(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Fix: import { Pagination, Autoplay } from "swiper";
+    // Fix: import { Pagination, Autoplay } from "swiper/modules";
     // To:  import { Pagination, Autoplay } from "swiper/modules";
     if (content.includes('from "swiper"') || content.includes("from 'swiper'")) {
       content = content.replace(

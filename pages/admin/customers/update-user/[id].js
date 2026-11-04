@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import DashboardLayout from "../../../../src/Components/DashboardLayout";
-import AdminDashboardBreadcrumb from "../../../../src/Shared/AdminDashboardBreadcrumb";
+import DashboardLayout from '../../../../Components/DashboardLayout";
+import AdminDashboardBreadcrumb from '../../../../Shared/AdminDashboardBreadcrumb";
 import { useForm } from "react-hook-form";
 import {
   singleImageUploader,
@@ -12,7 +12,7 @@ import { useQuery } from "react-query";
 import { useRouter } from "next/router";
 import { getUsersById } from "../../../../lib/helper";
 import Image from "next/image";
-import LoadingComponets from "../../../../src/Shared/LoadingComponets";
+import LoadingComponets from '../../../../Shared/LoadingComponets";
 import AuthUser from "../../../../lib/AuthUser";
 const UpdateUser = () => {
   const [imageUrl, setImageUrl] = useState(null);

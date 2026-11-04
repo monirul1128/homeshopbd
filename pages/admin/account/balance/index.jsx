@@ -1,21 +1,21 @@
 import React from "react";
-import DashboardLayout from "../../../../src/Components/DashboardLayout";
+import DashboardLayout from '../../../../Components/DashboardLayout";
 import { Icon } from "@iconify/react";
-import CustomModal from "../../../../src/Shared/CustomModal";
+import CustomModal from '../../../../Shared/CustomModal";
 import { useState } from "react";
-import AddBalance from "../../../../src/Components/Admin/Acount/Balance/AddBalance";
-import BalanceCard from "../../../../src/Components/Admin/Acount/Balance/BalanceCard";
+import AddBalance from '../../../../Components/Admin/Acount/Balance/AddBalance";
+import BalanceCard from '../../../../Components/Admin/Acount/Balance/BalanceCard";
 import { useQuery } from "react-query";
 import { getAccountingOverview, getAcount } from "../../../../lib/helper";
-import LoadingComponets from "../../../../src/Shared/LoadingComponets";
+import LoadingComponets from '../../../../Shared/LoadingComponets";
 import { server_url_v2 } from "../../../../lib/config";
-import TodayDueExpense from "../../../../src/Components/Admin/Acount/TodaysExpense/TodayDueExpense";
-import AdminDashboardBreadcrumb from "../../../../src/Shared/AdminDashboardBreadcrumb";
-import MoneyCard from "../../../../src/Components/Admin/Acount/Balance/MoneyCard";
+import TodayDueExpense from '../../../../Components/Admin/Acount/TodaysExpense/TodayDueExpense";
+import AdminDashboardBreadcrumb from '../../../../Shared/AdminDashboardBreadcrumb";
+import MoneyCard from '../../../../Components/Admin/Acount/Balance/MoneyCard";
 import DatePicker from "react-datepicker";
 import { useEffect } from "react";
 import { convertTimestamp2 } from "../../../../lib/convertTimestampDateAndTime";
-import ExpenseIncomeAdd from "../../../../src/Components/Admin/Acount/Category/ExpenseIncomeAdd";
+import ExpenseIncomeAdd from '../../../../Components/Admin/Acount/Category/ExpenseIncomeAdd";
 
 const Balance = () => {
   const [show, setShow] = useState(false);

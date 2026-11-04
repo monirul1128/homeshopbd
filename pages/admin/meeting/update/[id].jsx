@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import DashboardLayout from "../../../../src/Components/DashboardLayout";
-import AdminDashboardBreadcrumb from "../../../../src/Shared/AdminDashboardBreadcrumb";
+import DashboardLayout from '../../../../Components/DashboardLayout";
+import AdminDashboardBreadcrumb from '../../../../Shared/AdminDashboardBreadcrumb";
 import { useForm } from "react-hook-form";
 import { updateMethodHook } from "../../../../lib/usePostHooks";
 import server_url from "../../../../lib/config";
