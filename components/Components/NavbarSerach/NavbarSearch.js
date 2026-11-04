@@ -2,12 +2,12 @@ import React, { useContext, useRef } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import Image from "next/image";
 import Link from "next/link";
-import { useCustomQuery } from "../../components/hooks/useMyShopData";
+import { useCustomQuery } from "../../hooks/useMyShopData";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import CreateContext from "../CreateContex";
-import { setCookie } from "../../components/hooks/useCustomCookie";
+import { setCookie } from "../../hooks/useCustomCookie";
 
 
 const NavbarSearch = () => {

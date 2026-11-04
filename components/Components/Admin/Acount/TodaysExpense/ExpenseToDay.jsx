@@ -1,6 +1,6 @@
 import React from 'react';
 import TodaysExpenseTableData from './TodaysExpenseTableData';
-import { useFetchVersionTwo } from '../../../../components/hooks/usePublicFetchVersionTwo';
+import { useFetchVersionTwo } from '../../../../hooks/usePublicFetchVersionTwo';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { server_url_v2 } from '../../../../../lib/config';
@@ -8,7 +8,7 @@ import { convertTimestamp } from '../../../../../lib/convertTimestampDateAndTime
 import { Icon } from '@iconify/react';
 import { useQuery } from 'react-query';
 import { base_url_v2, getRowData } from '../../../../../lib/helper';
-import LoadingComponets from '../../../../components/Shared/LoadingComponets';
+import LoadingComponets from '../../../../Shared/LoadingComponets';
 
 const ExpenseToDay = () => {
     // const [todaysExpense, setTodaysExpense] = useState([])

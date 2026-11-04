@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CustomModal from '../../../components/Shared/CustomModal';
+import CustomModal from '../../../Shared/CustomModal';
 import ExtraDiscountOrder from "./ExtraDiscountOrder";
 
 const OrderPaymentInfo = ({ orderInfo, codAmount, refetch }) => {

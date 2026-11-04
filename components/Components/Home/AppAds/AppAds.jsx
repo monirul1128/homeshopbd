@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { useMyShopData } from "../../../components/hooks/useMyShopData";
+import { useMyShopData } from "../../../hooks/useMyShopData";
 import Link from "next/link";
 import { AiOutlineFacebook } from "react-icons/ai";
 

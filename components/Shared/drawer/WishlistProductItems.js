@@ -2,10 +2,10 @@ import React, { useContext, useState } from "react";
 import { MdDeleteForever } from "react-icons/md";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import Image from "next/image";
-import CreateContext from '../../components/Components/CreateContex';
+import CreateContext from '../../Components/CreateContex';
 import updateWishlistLocalStorage from "../../../lib/updateWishlistLocalStorage";
 import setCartInLocalStorage from "../../../lib/setCartInLocalStorage";
-import AlreadyProductHave from '../../components/Components/Home/PopularProducts/AlreadyProductHave';
+import AlreadyProductHave from '../../Components/Home/PopularProducts/AlreadyProductHave';
 import { useRouter } from "next/router";
 
 const WishlistProductItems = ({ product }) => {

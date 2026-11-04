@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import CustomeInput from '../../../components/Shared/AddressInput/CustomeInput';
-import CustomButtonLoading from '../../../components/Shared/CustomButtonLoading';
+import CustomeInput from '../../../Shared/AddressInput/CustomeInput';
+import CustomButtonLoading from '../../../Shared/CustomButtonLoading';
 import server_url from "../../../../lib/config";
 import { updateMethodHook } from "../../../../lib/usePostHooks";
 

@@ -4,10 +4,10 @@ import { useRouter } from 'next/router';
 import React, { useContext, useEffect } from 'react';
 import { AiOutlineSearch } from 'react-icons/ai';
 import CreateContext from '../../CreateContex';
-import { useCustomQuery } from '../../../components/hooks/useMyShopData';
+import { useCustomQuery } from '../../../hooks/useMyShopData';
 import { useState } from 'react';
 import { useRef } from 'react';
-import { setCookie } from "../../../components/hooks/useCustomCookie"
+import { setCookie } from "../../../hooks/useCustomCookie"
 import swal from 'sweetalert';
 
 const SelectProduct = ({ setGetProductId, setShow, getProductId }) => {

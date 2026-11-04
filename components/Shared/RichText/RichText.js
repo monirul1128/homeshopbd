@@ -1,6 +1,6 @@
 import JoditEditor from "jodit-react";
 import React, { useContext, useRef } from "react";
-import CreateContext from '../../components/Components/CreateContex';
+import CreateContext from '../../Components/CreateContex';
 const config = ["bold", "italic", "underline", "link", "unlink"];
 
 const RichText = () => {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { updateMethodHook } from "../../../../lib/usePostHooks";
 import server_url from "../../../../lib/config";
-import SelectProductItemAll from '../../../components/Shared/drawer/SelectProductItemAll';
+import SelectProductItemAll from '../../../Shared/drawer/SelectProductItemAll';
 
 const FlashProductLeft = ({ getProductId, setGetProductId, id,time,setTime }) => {
   const [loading, setLoading] = useState(false);

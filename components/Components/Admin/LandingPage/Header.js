@@ -1,5 +1,5 @@
 import React from 'react';
-import { useMyShopData } from '../../../components/hooks/useMyShopData';
+import { useMyShopData } from '../../../hooks/useMyShopData';
 import Image from 'next/image';
 import { Icon } from '@iconify/react';
 import { useState } from 'react';

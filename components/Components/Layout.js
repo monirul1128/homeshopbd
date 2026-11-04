@@ -1,11 +1,11 @@
 import { useRouter } from "next/router";
 import React, { useContext, useEffect, useState } from "react";
-import BottomNav from '../components/Shared/BottomNav';
-import DashboardNavbar from '../components/Shared/DashboardNavbar';
-import CartDrawer from '../components/Shared/drawer/CartDrawer';
-import Footers from '../components/Shared/Footers';
-import Navbar from '../components/Shared/Navbar';
-import { useUserData } from "../components/hooks/useMyShopData";
+import BottomNav from '../Shared/BottomNav';
+import DashboardNavbar from '../Shared/DashboardNavbar';
+import CartDrawer from '../Shared/drawer/CartDrawer';
+import Footers from '../Shared/Footers';
+import Navbar from '../Shared/Navbar';
+import { useUserData } from "../hooks/useMyShopData";
 import CreateContext from "./CreateContex";
 import HelpButton from "./HelpButton";
 import PopUpModalOpen from "./Admin/flashProduct/PopUpModalOpen";

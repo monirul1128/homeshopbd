@@ -7,7 +7,7 @@ import { useState } from 'react';
 import server_url from '../../../../lib/config';
 import { useEffect } from 'react';
 import Image from 'next/image';
-import CustomModal from '../../../components/Shared/CustomModal';
+import CustomModal from '../../../Shared/CustomModal';
 import Link from 'next/link';
 const Users = ({ setSelectedUser, selectedUser }) => {
     const [users, setUsers] = useState([]);

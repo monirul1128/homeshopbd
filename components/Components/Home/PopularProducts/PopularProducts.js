@@ -2,9 +2,9 @@ import { useContext, useEffect, useState } from "react";
 import { MdOutlineUnfoldMore } from "react-icons/md";
 import { useQuery } from "react-query";
 import { products } from "../../../../lib/helper";
-import { getCookie, setCookie } from "../../../components/hooks/useCustomCookie";
-import { useCustomQuery } from "../../../components/hooks/useMyShopData";
-import ProductCard from '../../../components/Shared/ProductCard';
+import { getCookie, setCookie } from "../../../hooks/useCustomCookie";
+import { useCustomQuery } from "../../../hooks/useMyShopData";
+import ProductCard from '../../../Shared/ProductCard';
 import CreateContext from "../../CreateContex";
 import CustomProductSectionSkeleton from "../../CustomSkeleton/CustomProductSectionSkeleton";
 

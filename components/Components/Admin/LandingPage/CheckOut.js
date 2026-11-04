@@ -15,10 +15,10 @@ import {
   sumOfSalePrice2,
 } from "../../../../lib/commonFunction";
 import { usePostOrder } from "../../../../lib/usePostOrder";
-import CustomModal from '../../../components/Shared/CustomModal';
+import CustomModal from '../../../Shared/CustomModal';
 import SizeAndColorInCheckout from "../../CheckoutProductItems/SizeAndColorInCheckout";
 import server_url from "../../../../lib/config";
-import useFacebookPixel from "../../../components/hooks/useFacebookPixel";
+import useFacebookPixel from "../../../hooks/useFacebookPixel";
 
 const CheckOut = ({ data, loading }) => {
   const [sizeIndex, setSizeIndex] = useState(0);

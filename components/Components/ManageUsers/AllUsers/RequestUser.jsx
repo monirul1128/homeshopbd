@@ -5,10 +5,10 @@ import swal from "sweetalert";
 import server_url from "../../../../lib/config";
 import FetchGetHook, { FetchGetHook3 } from "../../../../lib/FetchGetHook";
 import AllUserRow from "./AllUserRow";
-import CustomPagination from '../../../components/Shared/CustomPagination';
+import CustomPagination from '../../../Shared/CustomPagination';
 import AllUserRow2 from "./AllUserRow2";
 import AllUserRow3 from "./AllUserRow3";
-import LoadingComponets from '../../../components/Shared/LoadingComponets';
+import LoadingComponets from '../../../Shared/LoadingComponets';
 
 const RequestUser = () => {
   const [users, setUsers] = useState([]);

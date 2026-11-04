@@ -2,9 +2,9 @@ import React, { useContext, useEffect, useState } from "react";
 import ImageGallery from "react-image-gallery";
 import Image from "next/image";
 import { FaCommentsDollar, FaPiggyBank, FaTruck } from "react-icons/fa";
-import RatingReview from '../../components/Components/Shared/RatingReview';
-import Descriptions from '../../components/Components/Components/ProductsDetails/Descriptions/Descriptions';
-import RelatedProduct from '../../components/Components/Components/ProductsDetails/RelatedProduct/RelatedProduct';
+import RatingReview from '../../Components/Shared/RatingReview';
+import Descriptions from '../../Components/Components/ProductsDetails/Descriptions/Descriptions';
+import RelatedProduct from '../../Components/Components/ProductsDetails/RelatedProduct/RelatedProduct';
 import StarRating from "./StarRating";
 const images = [
   {

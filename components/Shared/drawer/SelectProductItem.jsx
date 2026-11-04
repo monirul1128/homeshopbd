@@ -3,7 +3,7 @@ import { MdDeleteForever } from "react-icons/md";
 import { reactLocalStorage } from "reactjs-localstorage";
 import Image from "next/image";
 import updateCartLocalStorage from "../../../lib/updateCartLocalStorage";
-import CreateContext from '../../components/Components/CreateContex';
+import CreateContext from '../../Components/CreateContex';
 import { useRouter } from "next/router";
 
 const SelectProductItem = ({ product, handleSelectProduct, getProductId }) => {

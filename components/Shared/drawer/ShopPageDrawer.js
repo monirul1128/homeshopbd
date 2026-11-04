@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import Drawer from "react-modern-drawer";
 import { MdAddShoppingCart } from "react-icons/md";
 
-import CreateContext from '../../components/Components/CreateContex';
+import CreateContext from '../../Components/CreateContex';
 import { useRouter } from "next/router";
 import { AiFillFilter } from "react-icons/ai";
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import TodaysExpenseTableData from './TodaysExpenseTableData';
-import { useFetchVersionTwo } from '../../../../components/hooks/usePublicFetchVersionTwo';
+import { useFetchVersionTwo } from '../../../../hooks/usePublicFetchVersionTwo';
 import { convertTimestamp } from '../../../../../lib/convertTimestampDateAndTime';
 
 const AllDueExpense = () => {

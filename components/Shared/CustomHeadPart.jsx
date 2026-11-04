@@ -1,7 +1,7 @@
 import { Icon } from "@iconify/react";
 import React from "react";
 import CustomModal from "./CustomModal";
-import AddMainExpenseCard from '../components/Components/Admin/Acount/ExpenseCalculate/AddMainExpenseCard';
+import AddMainExpenseCard from '../Components/Admin/Acount/ExpenseCalculate/AddMainExpenseCard';
 import { useState } from "react";
 
 

@@ -10,7 +10,7 @@ import "swiper/css/autoplay";
 // import required modules
 import { Pagination, Autoplay } from "swiper/modules";
 import Image from "next/image";
-import { useCustomQuery } from "../../../components/hooks/useMyShopData";
+import { useCustomQuery } from "../../../hooks/useMyShopData";
 import CustomBannerSkeleton from "../../CustomSkeleton/CustomBannerSkeleton";
 import Link from "next/link";
 

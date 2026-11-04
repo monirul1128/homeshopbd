@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import CreateContext from '../components/Components/CreateContex';
+import CreateContext from '../Components/CreateContex';
 import { BiUser } from "react-icons/bi";
 import { AiOutlineHome } from "react-icons/ai";
 import { HiMenuAlt1 } from "react-icons/hi";
@@ -9,7 +9,7 @@ import UserBottomDrawer from "./drawer/UserBottomDrawer";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import AuthUser from "../../lib/AuthUser";
-import { useUserData } from "../components/hooks/useMyShopData";
+import { useUserData } from "../hooks/useMyShopData";
 import Image from "next/image";
 import userImage from "../assets/image/user.jpg";
 

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import CustomModal from '../../../../components/Shared/CustomModal';
+import CustomModal from '../../../../Shared/CustomModal';
 import EditCategoryModal from "../Category/EditCategoryModal";
 import { useContext } from "react";
 import CreateContext from "../../../CreateContex";

@@ -5,12 +5,12 @@ import swal from "sweetalert";
 import server_url from "../../../../lib/config";
 import FetchGetHook, { FetchGetHook3 } from "../../../../lib/FetchGetHook";
 import AllUserRow from "./AllUserRow";
-import CustomPagination from '../../../components/Shared/CustomPagination';
+import CustomPagination from '../../../Shared/CustomPagination';
 import AllUserRow2 from "./AllUserRow2";
-import LoadingComponets from '../../../components/Shared/LoadingComponets';
+import LoadingComponets from '../../../Shared/LoadingComponets';
 import DownloadButton from "./DownloadButton";
-import CustomPagination3 from '../../../components/Shared/CustomPagination3';
-import CustomPagination2 from '../../../components/Shared/CustomPagination2';
+import CustomPagination3 from '../../../Shared/CustomPagination3';
+import CustomPagination2 from '../../../Shared/CustomPagination2';
 
 const ReSelarUser = () => {
   const [users, setUsers] = useState([]);

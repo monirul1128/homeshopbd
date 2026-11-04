@@ -5,7 +5,7 @@ import { IoLogoYoutube } from "react-icons/io";
 import { FaLinkedinIn } from "react-icons/fa";
 import Link from "next/link";
 import AuthUser from "../../lib/AuthUser";
-import { useMyShopData } from "../components/hooks/useMyShopData";
+import { useMyShopData } from "../hooks/useMyShopData";
 import { MdLocationOn, MdOutlineAlternateEmail, MdPhone } from "react-icons/md";
 import { IoLogoTiktok } from "react-icons/io5";
 const Footers = () => {
