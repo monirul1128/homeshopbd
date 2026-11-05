@@ -10,39 +10,37 @@ import ProductSection from '../components/Components/ProductSection/ProductSecti
 import OurBrand from '../components/Shared/OurBrand';
 import NewsLetter from '../components/Components/Home/NewsLetter/NewsLetter';
 import AppAds from '../components/Components/Home/AppAds/AppAds';
-import prisma from "../lib/prisma";
+import connectDB from "../lib/mongodb";
+import Product from "../models/Product";
+import CategoryModel from "../models/Category";
 
 export async function getStaticProps() {
   try {
-    // Query database directly instead of fetching from API routes
-    const [banners, category, products, discountedProducts] = await Promise.all([
-      // Banners - TODO: create Banner table or return empty for now
-      Promise.resolve([]),
-      
+    // Connect to MongoDB
+    await connectDB();
+
+    // Query MongoDB directly
+    const [category, products, discountedProducts] = await Promise.all([
       // Categories
-      prisma.category.findMany({
-        where: { status: true },
-        take: 100
-      }),
+      CategoryModel.find({ status: true }).limit(100).lean(),
       
       // Products
-      prisma.product.findMany({
-        where: { status: true },
-        orderBy: { createdAt: 'desc' },
-        take: 100
-      }),
+      Product.find({ status: true })
+        .sort({ createdAt: -1 })
+        .limit(100)
+        .lean(),
       
       // Discounted products
-      prisma.product.findMany({
-        where: { 
-          status: true,
-          discount: { gte: 1 }
-        },
-        take: 100
+      Product.find({ 
+        status: true,
+        discount: { $gte: 1 }
       })
+      .limit(100)
+      .lean()
     ]);
 
-    // Flash data - TODO: implement when Flash model is ready
+    // Banners - TODO: implement when needed
+    const banners = [];
     const flashData = null;
 
     return {

@@ -1,21 +1,24 @@
 import React from "react";
 import AppAds from '../../components/Components/Home/AppAds/AppAds';
 import SecondaryImageCover from '../../components/Shared/SecondaryImageCover';
-import prisma from "../../lib/prisma";
+import connectDB from "../../lib/mongodb";
+import Blog from "../../models/Blog";
 import BlogSection from '../../components/Components/Admin/blog/BlogSection';
 
 export async function getStaticProps() {
   try {
-    // Query database directly instead of fetching from API
-    const blogs = await prisma.blog.findMany({
-      where: { status: 'SHOW' },
-      orderBy: { createdAt: 'desc' },
-      take: 100
-    });
+    // Connect to MongoDB
+    await connectDB();
+
+    // Query MongoDB for blogs
+    const blogs = await Blog.find({ status: 'SHOW' })
+      .sort({ createdAt: -1 })
+      .limit(100)
+      .lean();
 
     return {
       props: { 
-        blogs: JSON.parse(JSON.stringify(blogs)) || []
+        blogs: JSON.parse(JSON.stringify(blogs || []))
       },
       revalidate: 60,
     };
