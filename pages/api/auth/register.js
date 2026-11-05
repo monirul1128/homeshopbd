@@ -1,4 +1,5 @@
-import prisma from '../../../lib/prisma';
+import connectDB from '../../../lib/mongodb';
+import User from '../../../models/User';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 
@@ -8,6 +9,8 @@ export default async function handler(req, res) {
   }
 
   try {
+    await connectDB();
+
     const { email, password, confirmPassword, fullName, phone, address, gender } = req.body;
 
     // Validation
@@ -33,9 +36,7 @@ export default async function handler(req, res) {
     }
 
     // Check if user already exists
-    const existingUser = await prisma.user.findUnique({
-      where: { email: email.toLowerCase() }
-    });
+    const existingUser = await User.findOne({ email: email.toLowerCase() });
 
     if (existingUser) {
       return res.status(409).json({
@@ -48,24 +49,22 @@ export default async function handler(req, res) {
     const hashedPassword = await bcrypt.hash(password, 10);
 
     // Create user
-    const user = await prisma.user.create({
-      data: {
-        email: email.toLowerCase(),
-        password: hashedPassword,
-        fullName,
-        phone: phone || null,
-        address: address || null,
-        gender: gender || null,
-        role: 'USER',
-        status: 'ACTIVE',
-        joiningDate: new Date()
-      }
+    const user = await User.create({
+      email: email.toLowerCase(),
+      password: hashedPassword,
+      fullName,
+      phone: phone || null,
+      address: address || null,
+      gender: gender || null,
+      role: 'USER',
+      status: 'ACTIVE',
+      joiningDate: new Date()
     });
 
     // Generate JWT token
     const token = jwt.sign(
       {
-        id: user.id,
+        id: user._id,
         email: user.email,
         role: user.role
       },
@@ -74,7 +73,8 @@ export default async function handler(req, res) {
     );
 
     // Remove password from response
-    const { password: _, ...userWithoutPassword } = user;
+    const userResponse = user.toObject();
+    delete userResponse.password;
 
     return res.status(201).json({
       success: true,

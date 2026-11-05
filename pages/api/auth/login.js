@@ -1,4 +1,5 @@
-import prisma from '../../../lib/prisma';
+import connectDB from '../../../lib/mongodb';
+import User from '../../../models/User';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 
@@ -8,6 +9,8 @@ export default async function handler(req, res) {
   }
 
   try {
+    await connectDB();
+
     const { email, password } = req.body;
 
     // Validation
@@ -19,9 +22,7 @@ export default async function handler(req, res) {
     }
 
     // Find user
-    const user = await prisma.user.findUnique({
-      where: { email: email.toLowerCase() }
-    });
+    const user = await User.findOne({ email: email.toLowerCase() });
 
     if (!user) {
       return res.status(401).json({
@@ -51,7 +52,7 @@ export default async function handler(req, res) {
     // Generate JWT token
     const token = jwt.sign(
       {
-        id: user.id,
+        id: user._id,
         email: user.email,
         role: user.role
       },
@@ -60,13 +61,14 @@ export default async function handler(req, res) {
     );
 
     // Remove password from response
-    const { password: _, ...userWithoutPassword } = user;
+    const userResponse = user.toObject();
+    delete userResponse.password;
 
     return res.status(200).json({
       success: true,
       message: 'Login successful',
       data: {
-        user: userWithoutPassword,
+        user: userResponse,
         token
       }
     });
