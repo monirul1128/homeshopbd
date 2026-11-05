@@ -19,27 +19,39 @@ export async function getStaticProps() {
     // Connect to MongoDB
     await connectDB();
 
-    // Query MongoDB directly
-    const [category, products, discountedProducts] = await Promise.all([
-      // Categories
-      CategoryModel.find({ status: true }).limit(100).lean(),
-      
-      // Products
-      Product.find({ status: true })
-        .sort({ createdAt: -1 })
-        .limit(100)
-        .lean(),
-      
-      // Discounted products
-      Product.find({ 
-        status: true,
-        discount: { $gte: 1 }
-      })
+    // Query MongoDB directly - using correct field names from your schema
+    const products = await Product.find({ status: true })
+      .sort({ createdAt: -1 })
       .limit(100)
       .lean()
-    ]);
+      .catch(() => []);
+    
+    // Get products with discount
+    const discountedProducts = await Product.find({ 
+      status: true,
+      discount: { $gt: 0 }
+    })
+    .limit(100)
+    .lean()
+    .catch(() => []);
 
-    // Banners - TODO: implement when needed
+    // Get categories from products
+    const allCategories = await Product.find({ status: true })
+      .select('category')
+      .limit(100)
+      .lean()
+      .catch(() => []);
+
+    // Extract unique categories
+    const categorySet = new Set();
+    allCategories.forEach(product => {
+      if (product.category && Array.isArray(product.category)) {
+        product.category.forEach(cat => categorySet.add(cat));
+      }
+    });
+    const category = Array.from(categorySet).slice(0, 20);
+
+    // Banners
     const banners = [];
     const flashData = null;
 

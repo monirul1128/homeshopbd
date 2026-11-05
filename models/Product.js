@@ -2,39 +2,30 @@ import mongoose from 'mongoose';
 
 const ProductSchema = new mongoose.Schema(
   {
-    name: {
-      type: String,
-      required: true,
-    },
+    title: String,
     description: String,
-    price: {
-      type: Number,
-      required: true,
-    },
+    price: Number,
     discount: Number,
-    stock: Number,
-    category: mongoose.Schema.Types.ObjectId,
-    categoryName: String,
-    brand: String,
-    image: String,
-    images: [String],
+    quantity: Number,
+    category: [String],
+    taggedIds: [String],
+    newProduct: Boolean,
     status: {
       type: Boolean,
       default: true,
     },
+    image: String,
+    images: [String],
     sku: String,
     rating: Number,
-    reviews: [
-      {
-        user: String,
-        comment: String,
-        rating: Number,
-        date: {
-          type: Date,
-          default: Date.now,
-        },
-      },
-    ],
+    reviews: mongoose.Schema.Types.Mixed,
+    specifications: mongoose.Schema.Types.Mixed,
+    subCategory: String,
+    brand: String,
+    seller: String,
+    stock: Number,
+    discount_price: Number,
+    offer_end_date: Date,
   },
   { timestamps: true }
 );
