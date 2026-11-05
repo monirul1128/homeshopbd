@@ -15,12 +15,13 @@ export async function getStaticProps() {
 
     return {
       props: { 
-        blogs: blogs || []
+        blogs: JSON.parse(JSON.stringify(blogs)) || []
       },
       revalidate: 60,
     };
   } catch (error) {
     console.error('Error fetching blogs:', error);
+    // Return empty array on error to allow build to complete
     return {
       props: { blogs: [] },
       revalidate: 60,
@@ -28,9 +29,7 @@ export async function getStaticProps() {
   }
 }
 
-const BlogPage = ({ blogs }) => {
-  console.log(blogs);
-
+const BlogPage = ({ blogs = [] }) => {
   return (
     <div>
       <>

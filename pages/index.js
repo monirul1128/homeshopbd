@@ -47,10 +47,10 @@ export async function getStaticProps() {
 
     return {
       props: { 
-        banners, 
-        category: category || [], 
-        products: products || [], 
-        discountedProducts: discountedProducts || [], 
+        banners: JSON.parse(JSON.stringify(banners)), 
+        category: JSON.parse(JSON.stringify(category || [])), 
+        products: JSON.parse(JSON.stringify(products || [])), 
+        discountedProducts: JSON.parse(JSON.stringify(discountedProducts || [])), 
         flashData 
       },
       revalidate: 60,
