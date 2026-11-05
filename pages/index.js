@@ -10,12 +10,13 @@ import ProductSection from '../components/Components/ProductSection/ProductSecti
 import OurBrand from '../components/Shared/OurBrand';
 import NewsLetter from '../components/Components/Home/NewsLetter/NewsLetter';
 import AppAds from '../components/Components/Home/AppAds/AppAds';
-import connectDB from "../lib/mongodb";
-import Product from "../models/Product";
-import CategoryModel from "../models/Category";
 
 export async function getStaticProps() {
   try {
+    // Require models only on server-side (works in getStaticProps)
+    const connectDB = require("../lib/mongodb").default;
+    const Product = require("../models/Product").default;
+    
     // Connect to MongoDB
     await connectDB();
 
@@ -111,10 +112,9 @@ export default function Home({
     if (user) updateStatus();
   }, [user, updateStatus]);
   useEffect(() => {
-    if (discountedProducts?.data) {
-      const products = discountedProducts.data.products;
+    if (discountedProducts && discountedProducts.length > 0) {
       // Sorting by discount for discounted products
-      const discounted = [...products].sort((a, b) => b.discount - a.discount);
+      const discounted = [...discountedProducts].sort((a, b) => b.discount - a.discount);
       setDiscountProduct(discounted);
     }
   }, [discountedProducts]);
@@ -159,7 +159,7 @@ export default function Home({
       <FlashProductSection heading="Flash Sale" data={flashData} />
       <ProductSection
         heading="New Arrivals"
-        data={products.data?.products ?? []}
+        data={products ?? []}
       />
       <ProductSection
         heading="Latest Discounted Products"
@@ -168,7 +168,7 @@ export default function Home({
 
       <ProductSection
         heading="Just For You"
-        data={products.data?.products ?? []}
+        data={products ?? []}
         sliceItem={1000}
       />
       {/* <PopularProducts /> */}

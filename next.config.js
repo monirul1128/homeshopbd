@@ -15,7 +15,7 @@ const nextConfig = {
       use: "raw-loader",
     });
 
-    // Fix for MongoDB/Mongoose in Next.js
+    // Fix for MongoDB/Mongoose in Next.js - exclude server-only modules from client bundle
     if (!isServer) {
       config.resolve.fallback = {
         ...config.resolve.fallback,
@@ -26,6 +26,13 @@ const nextConfig = {
         os: false,
         tls: false,
         stream: false,
+        child_process: false,
+        dgram: false,
+        dns: false,
+        http2: false,
+        module: false,
+        util: false,
+        zlib: false,
       };
     }
 
