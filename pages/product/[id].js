@@ -657,7 +657,7 @@ export default ProductDetails;
 export async function getServerSideProps({ params }) {
   try {
     const res = await fetch(
-      `https://server-homeshopbd-2-kohl.vercel.app/api/v1/product/path/${params.id}`
+      `${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/api/products/path/${params.id}`
     );
 
     // যদি response ঠিক না আসে
@@ -685,7 +685,6 @@ export async function getServerSideProps({ params }) {
   } catch (error) {
     console.error("Error fetching product:", error);
     return {
-      notFound: true,
-    };
+      notFound: true };
   }
 }

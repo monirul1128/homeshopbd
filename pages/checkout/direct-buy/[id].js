@@ -80,7 +80,7 @@ const DirectBuy = () => {
     },
   });
   // -------------------find product using id----------------
-  const productUrl = `https://server-homeshopbd-2-kohl.vercel.app/api/v1/product/${id}`;
+  const productUrl = `/api/products/${id}`;
 
   useEffect(() => {
     setLoading(true);
