@@ -147,10 +147,11 @@ const ProductCard = ({ product }) => {
           className="w-full h-[200px] overflow-hidden relative cursor-pointer  "
         >
           <img
-            src={product?.imageURLs[0]?.replace("http://", "https://")}
-            alt="product image"
+            src={product?.imageURLs?.[0]?.replace("http://", "https://") || '/placeholder-product.jpg'}
+            alt={product?.name || "product image"}
             width={300}
             height={200}
+            onError={(e) => { e.target.src = '/placeholder-product.jpg'; }}
             className="rounded-t-md object-cover h-[200px] hover:scale-110 duration-150 overflow-hidden"
           />
         </Link>
