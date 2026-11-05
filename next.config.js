@@ -9,11 +9,26 @@ const nextConfig = {
   },
   reactStrictMode: true,
   swcMinify: true,
-  webpack: (config) => {
+  webpack: (config, { isServer }) => {
     config.module.rules.push({
       test: /\.md$/,
       use: "raw-loader",
     });
+
+    // Fix for MongoDB/Mongoose in Next.js
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        net: false,
+        fs: false,
+        path: false,
+        crypto: false,
+        os: false,
+        tls: false,
+        stream: false,
+      };
+    }
+
     return config;
   },
 
