@@ -30,11 +30,18 @@ export async function getStaticProps() {
 }
 
 const BlogPage = ({ blogs = [] }) => {
+  // Wrap blogs in the expected structure for BlogSection
+  const blogData = {
+    data: {
+      result: blogs
+    }
+  };
+
   return (
     <div>
       <>
         <SecondaryImageCover title={"Our Blog"} />
-        <BlogSection data={blogs} />
+        <BlogSection data={blogData} />
         <AppAds />
       </>
     </div>
