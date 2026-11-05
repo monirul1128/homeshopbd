@@ -2,20 +2,16 @@ import mongoose from 'mongoose';
 
 const CategorySchema = new mongoose.Schema(
   {
-    name: {
-      type: String,
-      required: true,
-      unique: true,
-    },
-    description: String,
-    image: String,
+    parentCategory: String,
+    childCategory: [String],
+    imageURLs: [String],
+    imageURLs2: String,
     status: {
       type: Boolean,
       default: true,
     },
-    slug: String,
   },
-  { timestamps: true }
+  { timestamps: true, strict: false }
 );
 
 export default mongoose.models.Category || mongoose.model('Category', CategorySchema);
